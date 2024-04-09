@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="background.scss">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Document</title>
@@ -30,6 +31,16 @@
             --tw-shadow: 0 0 10px rgba(0, 0, 255, 0.6); /* Adjust the alpha value to change the intensity */
             filter: drop-shadow(var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow));
         }
+
+        .menu-icon {
+        
+        width:30px;
+      font-size: 24px;
+      color: #4CAF50; /* Adjust the color as needed */
+      cursor: pointer;
+      /* background-color: red; */
+
+    }
     </style>
 </head>
 <body>
@@ -38,8 +49,11 @@
     <div style="display: flex;align-items: center; padding-left: 15px; color:rgb(19, 95, 180); font-family: 'Times New Roman', Times, serif;font-size: 30px;font-weight:bolder;">
     <h1>Solace.</h1>
 </div>
+<div class="mobile-only">
+<a href="#" class="menu-icon">&#9776;</a>
+
+</div>
     <div class="header-button" >
-  
         <table>
             <tr>
               <td><a href="">Home</a></td>
@@ -48,12 +62,10 @@
               <td><a href="">Projects</a></td>
             </tr>
           </table>
-
 </div>
 </div>
 <div class="home-container">
     <div class="left-container">
-     
         <div class="row-one">
             <table   style="width:30%;">
                 <tr>
@@ -63,14 +75,12 @@
                     <td><a href="#"><i class="far fa-envelope text-indigo-500 glow"></i></a></td>
                 </tr>
             </table>
-
         </div>
         <div class="row-two">
             <!-- <br/> -->
             <h1  class="topic">
                 I'm a Software Developer    |
             </h1>
-
         </div>
         <div class="row-three">
             <p class="my-discrip">
@@ -83,27 +93,15 @@
         <div class="button-row">
             <button class="hire" >Hire Me</button>
             <button  class="download">Download CV  </button>
-
         </div>
-
-
-
-
-
-
     </div>
     <div class="right-container">
         <!-- <div class="my-image">
-
         </div> -->
-        <img src="images/home.png"
-
+        <img src="images/home.png" class="file-img"/>
     </div>
 </div>
-
-
 </div>
-
 <div class="logos">
     <div class="logos-slide">
       <img src="./images/scroll/angular.png" />
@@ -114,10 +112,6 @@
       <img src="./images/scroll/html.png" />
       <img src="./images/scroll/ionic.png" />
       <img src="./images/scroll/java.png" />
-    
-    <!-- </div>
-    
-    <div class="logos-slide"> -->
         <img src="./images/scroll/Microsoft NET.png" />
         <img src="./images/scroll/Ms Sql.png" />
         <img src="./images/scroll/mysql.png" />
@@ -129,9 +123,7 @@
         <img src="./images/scroll/JavaScript-Logo-2048x1280.png" />
         <img src="./images/scroll/MIRO-logo.png" />
         <img src="./images/scroll/GitHub.png" />
-       
       </div>
-      
   </div>
 
  <!-- About Section -->
@@ -144,7 +136,7 @@
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
                 <p>
-                    I'm Nduduzo Ndlovu, 
+                    I'm <strong  style="color:#0066ff ">Nduduzo Ndlovu </strong>, 
                     a dedicated software developer skilled at creating smart solutions. 
                     I focus on making top-notch, user-friendly software through constant learning and creative thinking
                 </p>
@@ -162,39 +154,100 @@
 </div>
 <div class="tab-contents" id ="experience">
     <ul>
-        <li>  <span>Here</span><br/>Designing Web/App Interfaces</li>
-        <li>  <span>Web Development</span><br/>Web App Development</li>
-        <li>  <span>App Development</span><br/>Building Android/iOS apps</li>
+        <li>  <span>Aug 2023 - Current</span><br/>Intern : Web & App Developer at MUTInnovationLab</li>
+        <li>  <span>Mar 2023 - Dec 2023</span><br/>Programming Tutor at MUT</li>
+        <li>  <span>Mar 2022 - Dec 2022</span><br/>Mentor : Software Development Students at MUT</li>
     </ul>
 </div>
 <div class="tab-contents" id="education">
     <ul>
-        <li>  <span>There</span><br/>Designing Web/App Interfaces</li>
-        <li>  <span>Web Development</span><br/>Web App Development</li>
-        <li>  <span>App Development</span><br/>Building Android/iOS apps</li>
+        <li>  <span>2020 - 2023</span><br/>Diploma in Information Technology</li>
+        <li>(Software Development)</li>
     </ul>
 </div>
             </div>
         </div>
     </div>
+</div>
 
+<!-- --------------------Services-------------------------------- -->
+<!-- <div id="service">
+<div  class="service-box">
 
 </div>
-<!-- <div id="about">
 
-    <div class="left-content">
-            <img src="images/about.png"/>
-    </div>
-    <div class="right-content">
-        <div class="about-container">
 
-        </div>
-        <div class="table-container">
 
-        </div>
-
-    </div>
 </div> -->
+<section class="services" id="services">
+    <div class="max-width">
+      <h2 class="title">My services</h2>
+
+      <div class="serv-content">
+
+        <div class="card">
+          <div class="box">
+            <i class="fas fa-laptop-code"></i>
+            <div class="text">Web & Apps Development</div>
+            <p>Creating websites that look great and work flawlessly. Bringing your ideas to life with clean and functional web development.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="box">
+            <i class="fas fa-user-secret"></i>
+            <div class="text">Application-level Encryption</div>
+            <p>Skilled in deploying application-level encryption methods at a mid-level capacity, prioritizing data protection and privacy within software systems. Capable of integrating encryption practices effectively to enhance security measures and ensure data integrity.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="box">
+            <i class="fas fa-code"></i>
+            <div class="text">UI/UX Design</div>
+            <p>Designing interfaces that captivate and function seamlessly. Transforming concepts into reality through sleek and efficient web design.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+    <div class="project" id="project">
+        
+        <!-- <h2 class="project-title">My Projects</h2>         -->
+            <div class="project-list">
+                
+                    <h1>Project 1</h1>
+
+            
+                <!-- <img src="images/scroll/GitHub.png" class="img-project"/> -->
+               
+            </div>
+            <div class="project-list">
+                <h1>Project 2</h1>
+            </div>
+            <div class="project-list">
+                <h1>Project 3</h1>
+            </div>
+            <div class="project-list">
+                <h1>Project 4</h1>
+            </div>
+            <!-- <div class="project-list">
+                <h1>Project 5</h1>
+            </div>
+            <div class="project-list">
+                <h1>Project 6</h1>
+            </div> -->
+
+    </div>
+<div  id="contact">
+
+</div>
+  
+
 <script>
     var tablinks=document.getElementsByClassName("tab-links");
     var tabcontents=document.getElementsByClassName("tab-contents");
