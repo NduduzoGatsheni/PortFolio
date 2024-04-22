@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="background.scss">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+     
+      
     <title>Document</title>
     <style>
         table {
@@ -41,29 +46,54 @@
       /* background-color: red; */
 
     }
+
+      .icon-button.active {
+    color: rgb(159, 182, 243);
+  }
+       .icon-button.active  span{
+        font-weight: bold;
+      }
     </style>
 </head>
 <body>
-    <div id="home">
-<div  class="header-nav">
-    <div style="display: flex;align-items: center; padding-left: 15px; color:rgb(19, 95, 180); font-family: 'Times New Roman', Times, serif;font-size: 30px;font-weight:bolder;">
-    <h1>Solace.</h1>
-</div>
-<div class="mobile-only">
-<a href="#" class="menu-icon">&#9776;</a>
+    <div  class="header-nav">
+        <div style="display: flex;align-items: center; padding-left: 15px; color:rgb(240, 83, 83); font-family: 'Times New Roman', Times, serif;font-size: 30px;font-weight:bolder;">
+        <h1 class="developer">Solace...</h1>
+    </div>
+    <div class="mobile-only">
+    <a href="#" class="menu-icon">&#9776;</a>
+    
+    </div>
+    <div class="head-nav">
+        <button id="homeBtn" class="icon-button" onclick="scrollToElement('home')">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </button>
+        
+        <button id="aboutBtn" class="icon-button" onclick="scrollToElement('about')">
+          <i class="fas fa-info-circle"></i>
+          <span>About Me</span>
+        </button>
+    
+        <button id="servicesBtn" class="icon-button" onclick="scrollToElement('services')">
+            <i class="fas fa-tasks"></i>
+            <span>Services</span>
+          </button>
+      
+        <button id="projectsBtn" class="icon-button" onclick="scrollToElement('projects')">
+          <i class="fas fa-tasks"></i>
+          <span>Projects</span>
+        </button>
+      
+        <button id="contactBtn" class="icon-button" onclick="scrollToElement('contact')">
+          <i class="fas fa-address-book"></i>
+          <span>Contacts</span>
+        </button>
+      </div>
+      
+    </div>
+    <section id="home">
 
-</div>
-    <div class="header-button" >
-        <table>
-            <tr>
-              <td><a href="">Home</a></td>
-              <td><a href="">About</a></td>
-              <td><a href="">Service</a></td>
-              <td><a href="">Projects</a></td>
-            </tr>
-          </table>
-</div>
-</div>
 <div class="home-container">
     <div class="left-container">
         <div class="row-one">
@@ -79,11 +109,11 @@
         <div class="row-two">
             <!-- <br/> -->
             <h1  class="topic">
-                I'm a Software Developer    |
+                <span>I'm a</span> <span>  Software </span>  <span> Developer </span> <span>|</span>  
             </h1>
         </div>
         <div class="row-three">
-            <p class="my-discrip">
+            <p class="my-discrip fade-up">
                 Hello! I'm Nduduzo Ndlovu, a dedicated developer passionate about crafting
                  exceptional digital experiences through innovative solutions. 
                 I'm eager to collaborate and contribute my expertise to your team 
@@ -91,43 +121,44 @@
             </p>
         </div>
         <div class="button-row">
-            <button class="hire" >Hire Me</button>
-            <button  class="download">Download CV  </button>
+            <button class="hire fade-up" >Hire Me</button>
+            <button  class="download fade-up">Download CV  </button>
         </div>
     </div>
     <div class="right-container">
-        <!-- <div class="my-image">
-        </div> -->
         <img src="images/home.png" class="file-img"/>
     </div>
 </div>
-</div>
-<div class="logos">
-    <div class="logos-slide">
-      <img src="./images/scroll/angular.png" />
-      <img src="./images/scroll/csharp.png" />
-      <img src="./images/scroll/CSS-Logo.png" />
-      <img src="./images/scroll/figma.png" />
-      <img src="./images/scroll/firebase.png" />
-      <img src="./images/scroll/html.png" />
-      <img src="./images/scroll/ionic.png" />
-      <img src="./images/scroll/java.png" />
-        <img src="./images/scroll/Microsoft NET.png" />
-        <img src="./images/scroll/Ms Sql.png" />
-        <img src="./images/scroll/mysql.png" />
-        <img src="./images/scroll/php.png" />
-        <img src="./images/scroll/typeScript.png" />
-        <img src="./images/scroll/wamp.png" />
-        <img src="./images/scroll/xampp.png" />
-        <img src="./images/scroll/microsoft.png" />
-        <img src="./images/scroll/JavaScript-Logo-2048x1280.png" />
-        <img src="./images/scroll/MIRO-logo.png" />
-        <img src="./images/scroll/GitHub.png" />
+
+
+</section>
+
+    <div class="logos">
+        <div class="logos-slide">
+          <img src="./images/scroll/angular.png" />
+          <img src="./images/scroll/csharp.png" />
+          <img src="./images/scroll/CSS-Logo.png" />
+          <img src="./images/scroll/figma.png" />
+          <img src="./images/scroll/firebase.png" />
+          <img src="./images/scroll/html.png" />
+          <img src="./images/scroll/ionic.png" />
+          <img src="./images/scroll/java.png" />
+            <img src="./images/scroll/Microsoft NET.png" />
+            <img src="./images/scroll/Ms Sql.png" />
+            <img src="./images/scroll/mysql.png" />
+            <img src="./images/scroll/php.png" />
+            <img src="./images/scroll/typeScript.png" />
+            <img src="./images/scroll/wamp.png" />
+            <img src="./images/scroll/xampp.png" />
+            <img src="./images/scroll/microsoft.png" />
+            <img src="./images/scroll/JavaScript-Logo-2048x1280.png" />
+            <img src="./images/scroll/MIRO-logo.png" />
+            <img src="./images/scroll/GitHub.png" />
+          </div>
       </div>
-  </div>
 
  <!-- About Section -->
-<div id="about">
+<section id="about">
     <div class="container">
         <div class="row">
             <div class="about-col-1">
@@ -168,7 +199,7 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <!-- --------------------Services-------------------------------- -->
 <!-- <div id="service">
@@ -215,7 +246,7 @@
 
 
 
-    <div class="project" id="project">
+    <section class="project" id="projects">
         
         <!-- <h2 class="project-title">My Projects</h2>         -->
             <div class="project-list">
@@ -242,13 +273,63 @@
                 <h1>Project 6</h1>
             </div> -->
 
+        </section>
+    <section id="contact">
+        <div class="const-header">
+        <h2>Send Me A Message</h2>
     </div>
-<div  id="contact">
-
-</div>
-  
-
-<script>
+    <div class="contact-content">
+        <div class="column-A">
+    
+            <h2>Getting In Touch is Easy</h2>
+            <br/>        <br/>
+            <span>Dr KaSeme Prixel, 161 Beach Hotel</span>
+            <br/>        <br/>
+            <span>Durban 4000</span>
+    
+           
+            <br/>        <br/>
+            <span>+2774 099 8713</span>
+            <br/>        <br/>
+            <span> <a href=" href="mailto:nduduzondlovu635@gmail.com" title="nduduzondlovu635@gmail.com"">nduduzondlovu635@gmail.com</a></span>
+            
+            <br/>        <br/>
+            <div class="social-icons">
+                <a href="https://wa.me/+27740998713" class="icon-link" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a> <!-- WhatsApp icon -->
+                <a href="https://www.facebook.com/Solace Nduvane Gatsheni" class="icon-link" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/ayandabuthelezi1974" class="icon-link" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/AyandaButhelezi" class="icon-link" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/ayanda-buthelezi-a6503b21a" class="icon-link" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.tiktok.com/@Ayanda AyandaButhelezi" class="icon-link" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a> <!-- TikTok icon -->
+            </div>
+            
+            
+        </div>
+    
+    <div class="column-container">
+        <div class="column-B">
+            <input type="text" placeholder="You Name"/><br/><br/>
+            <input type="text" placeholder="Your Email"/><br/><br/>
+            <textarea type="textarea" placeholder="Write me about any project or Job offer. I'd love to work with you."></textarea>
+            <br/>
+            <div style="width:100%; display: flex;justify-content: right;align-items: center;">
+            <button type="submit" class="submit">
+                Submit
+            </button>
+        </div>
+        
+        </div>
+        </div>
+        
+    
+    
+    </div>
+    
+    
+    
+    </section>
+    
+    <script>
     var tablinks=document.getElementsByClassName("tab-links");
     var tabcontents=document.getElementsByClassName("tab-contents");
 
@@ -262,6 +343,69 @@
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
     }
+
+
+
+
+        function updateActiveButtonOnScroll() {
+          var windowHeight = window.innerHeight;
+          var scrollPosition = window.scrollY + (windowHeight / 2); 
+          var sections = document.querySelectorAll('section'); 
+          var activeButtonId = null;
+        
+          sections.forEach(function(section) {
+            var sectionTop = section.offsetTop;
+            var sectionHeight = section.offsetHeight;
+            var sectionBottom = sectionTop + sectionHeight;
+        
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+              activeButtonId = section.id;
+            }
+          });
+        
+          if (activeButtonId) {
+            updateActiveButton(activeButtonId);
+          }
+        }
+        
+        window.addEventListener('scroll', updateActiveButtonOnScroll);
+        
+        window.addEventListener('load', function() {
+          scrollToElement('home');
+        });
+        
+        function scrollToElement(elementId) {
+          var element = document.getElementById(elementId);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            updateActiveButton(elementId);
+          }
+        }
+        
+        function updateActiveButton(activeId) {
+          var buttons = document.getElementsByClassName("icon-button");
+          for (var i = 0; i < buttons.length; i++) {
+            buttons[i].classList.remove("active");
+          }
+        
+          var activeButton = document.getElementById(activeId + "Btn");
+          if (activeButton) {
+            activeButton.classList.add("active");
+          }
+        }
+        
+        document.getElementById("downloadButton").addEventListener("click", function() {
+            // Replace "cv.pdf" with the actual filename of your CV
+            var fileUrl = "cv.pdf";
+            
+            // Create a temporary link element
+            var link = document.createElement("a");
+            link.href = fileUrl;
+            link.download = "cv.pdf"; // Specify the filename for the download
+            link.click();
+        });
+        
+
 
 
 </script>
