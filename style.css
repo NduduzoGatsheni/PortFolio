@@ -2,6 +2,13 @@
     margin:0;
     padding: 0;
 }
+:root {
+  --primary-dark: #011222;     /* Dark Navy Blue */
+  --secondary-dark: #00204a;   /* Deep Blue */
+  --accent-color: #00bbc2;     /* Teal Accent */
+  --light-text: #e6f1ff;       /* Off-White */
+  --muted-text: #a8b2d1;       /* Soft Gray-Blue */
+}
 html {
     scroll-behavior: smooth;
   }
@@ -9,8 +16,9 @@ html {
 body{
     margin:0;
     padding: 0;
-    background-color: rgb(26, 29, 160);
+    background-color: var(--primary-dark);
 }
+
 
 /* ---------------------------------------------------------------------- */
 .icon{
@@ -480,7 +488,7 @@ button:hover {
   }
   
   .services .serv-content .card:hover {
-    background: #4177b9;
+    background: #2e5585;
   }
   
   .services .serv-content .card .box {
@@ -594,7 +602,7 @@ button:hover {
           width: 100%; 
           padding-top: 5%;
           padding-bottom: 5%;
-          background-color: #1f3f4d;
+          background-color: hsl(180, 18%, 15%);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -614,22 +622,55 @@ button:hover {
 
       margin-bottom:100px;
       border-radius: 30px;
-      background: #314497;
+      background: #162c52;
       box-shadow:  6px 6px 12px #060b0e,
              -6px -6px 12px #162d36;
      }
      .project-list:nth-child(2){
-      background-color: #304841;
+      background-color: #112240;
       top: 140px;
      }
      .project-list:nth-child(3){
-      background-color: #1e312b;
+      background-color: #112240;
       top: 170px;
      }
      .project-list:nth-child(4){
-      background-color: #15241f;
+      background-color: #112240;
       top: 200px;
      }
+     .project-list:nth-child(5){
+      background-color: #112240;
+      top: 140px;
+     }
+     .project-list:nth-child(6){
+      background-color: #112240;
+      top: 170px;
+     }
+     .project-list:nth-child(7){
+      background-color: #112240;
+      top: 200px;
+     }
+     .project-list:nth-child(8){
+      background-color: #112240;
+      top: 140px;
+     }
+     .project-list:nth-child(9){
+      background-color: #112240;
+      top: 170px;
+     }
+     .project-list:nth-child(10){
+      background-color: #112240;
+      top: 200px;
+     }
+     .project-list:nth-child(11){
+      background-color: #112240;
+      top: 140px;
+     }
+     .project-list:nth-child(12){
+      background-color: #112240;
+      top: 170px;
+     }
+  
    
   
 .img-project{
@@ -638,11 +679,11 @@ button:hover {
   height: 100%;
 
 }
-#contact{
+/* #contact{
   width:100%;
   height:620px;
   background-color: #3e5e54;
-}
+} */
 
 /* --------------------My Enimations ------------------------- */
 .developer{

@@ -13,7 +13,7 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
      
       
-    <title>Document</title>
+    <title>Nduduzo Ndlovu</title>
     <style>
         table {
             border-collapse: collapse;
@@ -28,10 +28,6 @@
             color:white;
             text-decoration: none;
         }
-        /* .glow {
-            --tw-shadow: 0 0 10px rgba(0, 0, 255, 0.8); 
-            filter: drop-shadow(var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow));
-        } */
         .glow {
             --tw-shadow: 0 0 10px rgba(0, 0, 255, 0.6); /* Adjust the alpha value to change the intensity */
             filter: drop-shadow(var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow));
@@ -53,6 +49,114 @@
        .icon-button.active  span{
         font-weight: bold;
       }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      .project-container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .project-card {
+            width: 100%;
+            max-width: 1200px;
+            height: 80vh;
+            background-color: #112240;
+            border-radius: 15px;
+            display: flex;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover {
+            transform: scale(1.02);
+        }
+        .project-image {
+            width: 40%;
+            background-size: cover;
+            background-position: center;
+            border-radius:10px;
+        }
+        .project-content {
+            width: 60%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .project-title {
+            font-size: 2.5rem;
+            color: #64ffda;
+        }
+        .project-links {
+            display: flex;
+            gap: 15px;
+        }
+        .project-links a {
+            color: #e6f1ff;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+        .project-description {
+            margin: 20px 0;
+            line-height: 1.6;
+            color: #a8b2d1;
+        }
+        .project-technologies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .tech-tag {
+            background-color: #233554;
+            color: #64ffda;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        .project-cta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .cta-button {
+            background-color: #64ffda;
+            color: #0a192f;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #8cffd8;
+        }
     </style>
 </head>
 <body>
@@ -202,14 +306,7 @@
 </section>
 
 <!-- --------------------Services-------------------------------- -->
-<!-- <div id="service">
-<div  class="service-box">
 
-</div>
-
-
-
-</div> -->
 <section class="services" id="services">
     <div class="max-width">
       <h2 class="title">My services</h2>
@@ -246,34 +343,331 @@
 
 
 
-    <section class="project" id="projects">
-        
-        <!-- <h2 class="project-title">My Projects</h2>         -->
+    <section class="project" id="projects">   
             <div class="project-list">
                 
-                    <h1>Project 1</h1>
 
-            
-                <!-- <img src="images/scroll/GitHub.png" class="img-project"/> -->
+
+              <div class="project-image" style="background-image: url('/images/projects/chats.png')"></div>
+              <div class="project-content">
+                  <div class="project-header">
+                      <h1 class="project-title">Real-Time Peer-to-Peer Chat Application</h1>
+                    
+                  </div>
+                  <p class="project-description">
+                      A robust real-time communication platform enabling direct peer-to-peer messaging with advanced security features and seamless user experience.
+                  </p>
+                  <div class="project-technologies">
+                      <span class="tech-tag">WebRTC</span>
+                      <span class="tech-tag">React</span>
+                      <span class="tech-tag">Node.js</span>
+                      <span class="tech-tag">Socket.io</span>
+                  </div>
+                  <div class="project-cta">
+                      <div class="project-stats">
+                          <!-- Optional project statistics or metrics -->
+                      </div>
+                      <button class="cta-button">View Project Details</button>
+                  </div>
+              </div>
                
             </div>
-            <div class="project-list">
-                <h1>Project 2</h1>
-            </div>
-            <div class="project-list">
-                <h1>Project 3</h1>
-            </div>
-            <div class="project-list">
-                <h1>Project 4</h1>
-            </div>
-            <!-- <div class="project-list">
-                <h1>Project 5</h1>
-            </div>
-            <div class="project-list">
-                <h1>Project 6</h1>
-            </div> -->
 
+
+
+            <div class="project-list">
+              <div class="project-image" style="background-image: url('/images/projects/venue.jpg')"></div>
+        <div class="project-content">
+            <div class="project-header">
+                <h1 class="project-title">Venue Booking Platform for Universities</h1>
+                
+            </div>
+            <p class="project-description">
+                Innovative venue booking system for university spaces and resources, streamlining the process of reserving and managing campus facilities with real-time availability tracking.
+            </p>
+            <div class="project-technologies">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Express</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Stripe</span>
+            </div>
+            <div class="project-cta">
+                <div class="project-stats">
+                    <!-- Optional project statistics or metrics -->
+                </div>
+                <button class="cta-button">View Project Details</button>
+            </div>
+        </div>
+            </div>
+
+            <div class="project-list">
+              <div class="project-image" style="background-image: url('/images/projects/sms.png')"></div>
+              <div class="project-content">
+                  <div class="project-header">
+                      <h1 class="project-title">Student Performance Management System</h1>
+                    
+                  </div>
+                  <p class="project-description">
+                      Comprehensive academic tracking and analytics platform designed to provide deep insights into student performance, learning patterns, and predictive academic success metrics.
+                  </p>
+                  <div class="project-technologies">
+                      <span class="tech-tag">Python</span>
+                      <span class="tech-tag">Django</span>
+                      <span class="tech-tag">PostgreSQL</span>
+                      <span class="tech-tag">Machine Learning</span>
+                  </div>
+                  <div class="project-cta">
+                      <div class="project-stats">
+                          <!-- Optional project statistics or metrics -->
+                      </div>
+                      <button class="cta-button">View Project Details</button>
+                  </div>
+              </div>
+            </div>
+        
+            <div class="project-list">
+              <div class="project-image" style="background-image: url('/images/projects/bus.jpg')"></div>
+              <div class="project-content">
+                  <div class="project-header">
+                      <h1 class="project-title">Public Transport Ticketing and Payment System</h1>
+                    
+                  </div>
+                  
+                  <p class="project-description">
+                      Comprehensive academic tracking and analytics platform designed to provide deep insights into student performance, learning patterns, and predictive academic success metrics.
+                  </p>
+                  <div class="project-technologies">
+                      <span class="tech-tag">Python</span>
+                      <span class="tech-tag">Django</span>
+                      <span class="tech-tag">PostgreSQL</span>
+                      <span class="tech-tag">Machine Learning</span>
+                  </div>
+                  <div class="project-cta">
+                      <div class="project-stats">
+                          <!-- Optional project statistics or metrics -->
+                      </div>
+                      <button class="cta-button">View Project Details</button>
+                  </div>
+              </div>
+            </div>
+
+            <div class="project-list">
+              <div class="project-image" style="background-image: url('/images/projects/sms.png')"></div>
+              <div class="project-content">
+                  <div class="project-header">
+                      <h1 class="project-title">Wedding Planning and Scheduling System</h1>
+                    
+                  </div>
+                  <p class="project-description">
+                      Comprehensive academic tracking and analytics platform designed to provide deep insights into student performance, learning patterns, and predictive academic success metrics.
+                  </p>
+                  <div class="project-technologies">
+                      <span class="tech-tag">Python</span>
+                      <span class="tech-tag">Django</span>
+                      <span class="tech-tag">PostgreSQL</span>
+                      <span class="tech-tag">Machine Learning</span>
+                  </div>
+                  <div class="project-cta">
+                      <div class="project-stats">
+                          <!-- Optional project statistics or metrics -->
+                      </div>
+                      <button class="cta-button">View Project Details</button>
+                  </div>
+              </div>
+            </div>
+
+            <div class="project-list">
+              <div class="project-image" style="background-image: url('/images/projects/sms.png')"></div>
+              <div class="project-content">
+                  <div class="project-header">
+                      <h1 class="project-title">Cleaning Products E-Commerce Store</h1>
+                    
+                  </div>
+                  <p class="project-description">
+                      Comprehensive academic tracking and analytics platform designed to provide deep insights into student performance, learning patterns, and predictive academic success metrics.
+                  </p>
+                  <div class="project-technologies">
+                      <span class="tech-tag">Python</span>
+                      <span class="tech-tag">Django</span>
+                      <span class="tech-tag">PostgreSQL</span>
+                      <span class="tech-tag">Machine Learning</span>
+                  </div>
+                  <div class="project-cta">
+                      <div class="project-stats">
+                          <!-- Optional project statistics or metrics -->
+                      </div>
+                      <button class="cta-button">View Project Details</button>
+                  </div>
+              </div>
+            </div>
+
+            <div class="project-list">
+              <div class="project-image" style="background-image: url('/images/projects/sms.png')"></div>
+              <div class="project-content">
+                  <div class="project-header">
+                      <h1 class="project-title">Advanced Conference Management System</h1>
+                    
+                  </div>
+                  <p class="project-description">
+                      Comprehensive academic tracking and analytics platform designed to provide deep insights into student performance, learning patterns, and predictive academic success metrics.
+                  </p>
+                  <div class="project-technologies">
+                      <span class="tech-tag">Python</span>
+                      <span class="tech-tag">Django</span>
+                      <span class="tech-tag">PostgreSQL</span>
+                      <span class="tech-tag">Machine Learning</span>
+                  </div>
+                  <div class="project-cta">
+                      <div class="project-stats">
+                          <!-- Optional project statistics or metrics -->
+                      </div>
+                      <button class="cta-button">View Project Details</button>
+                  </div>
+              </div>
+            </div>
+
+            <div class="project-list">
+              <div class="project-image" style="background-image: url('/images/projects/sms.png')"></div>
+              <div class="project-content">
+                  <div class="project-header">
+                      <h1 class="project-title">Smart Student Attendance Management Application</h1>
+                    
+                  </div>
+                  <p class="project-description">
+                      Comprehensive academic tracking and analytics platform designed to provide deep insights into student performance, learning patterns, and predictive academic success metrics.
+                  </p>
+                  <div class="project-technologies">
+                      <span class="tech-tag">Python</span>
+                      <span class="tech-tag">Django</span>
+                      <span class="tech-tag">PostgreSQL</span>
+                      <span class="tech-tag">Machine Learning</span>
+                  </div>
+                  <div class="project-cta">
+                      <div class="project-stats">
+                          <!-- Optional project statistics or metrics -->
+                      </div>
+                      <button class="cta-button">View Project Details</button>
+                  </div>
+              </div>
+            </div>
+
+
+            <div class="project-list">
+              <div class="project-image" style="background-image: url('/images/projects/sms.png')"></div>
+              <div class="project-content">
+                  <div class="project-header">
+                      <h1 class="project-title">Comprehensive Job Application and Interview Scheduler</h1>
+                    
+                  </div>
+                  <p class="project-description">
+                      Comprehensive academic tracking and analytics platform designed to provide deep insights into student performance, learning patterns, and predictive academic success metrics.
+                  </p>
+                  <div class="project-technologies">
+                      <span class="tech-tag">Python</span>
+                      <span class="tech-tag">Django</span>
+                      <span class="tech-tag">PostgreSQL</span>
+                      <span class="tech-tag">Machine Learning</span>
+                  </div>
+                  <div class="project-cta">
+                      <div class="project-stats">
+                          <!-- Optional project statistics or metrics -->
+                      </div>
+                      <button class="cta-button">View Project Details</button>
+                  </div>
+              </div>
+            </div>
+
+            <div class="project-list">
+              <div class="project-image" style="background-image: url('/images/projects/sms.png')"></div>
+              <div class="project-content">
+                  <div class="project-header">
+                      <h1 class="project-title">Transparent and Secure Voting System</h1>
+                    
+                  </div>
+                  <p class="project-description">
+                      Comprehensive academic tracking and analytics platform designed to provide deep insights into student performance, learning patterns, and predictive academic success metrics.
+                  </p>
+                  <div class="project-technologies">
+                      <span class="tech-tag">Python</span>
+                      <span class="tech-tag">Django</span>
+                      <span class="tech-tag">PostgreSQL</span>
+                      <span class="tech-tag">Machine Learning</span>
+                  </div>
+                  <div class="project-cta">
+                      <div class="project-stats">
+                          <!-- Optional project statistics or metrics -->
+                      </div>
+                      <button class="cta-button">View Project Details</button>
+                  </div>
+              </div>
+            </div>
+
+            <div class="project-list">
+              <div class="project-image" style="background-image: url('/images/projects/sms.png')"></div>
+              <div class="project-content">
+                  <div class="project-header">
+                      <h1 class="project-title">Research Funding Management Platform</h1>
+                    
+                  </div>
+                  <p class="project-description">
+                      Comprehensive academic tracking and analytics platform designed to provide deep insights into student performance, learning patterns, and predictive academic success metrics.
+                  </p>
+                  <div class="project-technologies">
+                      <span class="tech-tag">Python</span>
+                      <span class="tech-tag">Django</span>
+                      <span class="tech-tag">PostgreSQL</span>
+                      <span class="tech-tag">Machine Learning</span>
+                  </div>
+                  <div class="project-cta">
+                      <div class="project-stats">
+                          <!-- Optional project statistics or metrics -->
+                      </div>
+                      <button class="cta-button">View Project Details</button>
+                  </div>
+              </div>
+            </div>
+
+            <div class="project-list">
+              <div class="project-image" style="background-image: url('/images/projects/sms.png')"></div>
+              <div class="project-content">
+                  <div class="project-header">
+                      <h1 class="project-title">Conference Video Sharing and Collaboration Platform</h1>
+                      
+                  </div>
+                  <p class="project-description">
+                      Comprehensive academic tracking and analytics platform designed to provide deep insights into student performance, learning patterns, and predictive academic success metrics.
+                  </p>
+                  <div class="project-technologies">
+                      <span class="tech-tag">Python</span>
+                      <span class="tech-tag">Django</span>
+                      <span class="tech-tag">PostgreSQL</span>
+                      <span class="tech-tag">Machine Learning</span>
+                  </div>
+                  <div class="project-cta">
+                      <div class="project-stats">
+                          <!-- Optional project statistics or metrics -->
+                      </div>
+                      <button class="cta-button">View Project Details</button>
+                  </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            
         </section>
+
+
+
     <section id="contact">
         <div class="const-header">
         <h2>Send Me A Message</h2>
