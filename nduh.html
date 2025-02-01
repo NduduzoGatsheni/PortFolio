@@ -3,203 +3,297 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        .animate-slide-up {
-            opacity: 0;
-            transform: translateY(50px);
-            animation: slideUp 0.8s forwards;
-        }
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/umd/lucide.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
 
-        .animate-slide-right {
-            opacity: 0;
-            transform: translateX(-50px);
-            animation: slideRight 0.8s forwards;
-        }
+   <!-- Lucide Icons CDN -->
+<script src="https://unpkg.com/lucide@latest"></script>
 
-        @keyframes slideUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes slideRight {
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .gradient-text {
-            background: linear-gradient(45deg, #6366f1, #ec4899);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .floating {
-            animation: floating 3s ease-in-out infinite;
-        }
-
-        @keyframes floating {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-
-        .blob {
-            animation: blob 7s infinite;
-        }
-
-        @keyframes blob {
-            0%, 100% { border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; }
-            50% { border-radius: 30% 60% 70% 40%/50% 60% 30% 60%; }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+     
 </head>
-<body class="bg-gradient-to-br from-gray-900 to-black min-h-screen">
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-sm">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-between items-center h-16">
-                <h1 class="text-3xl font-bold gradient-text">Solace</h1>
-                
-                <!-- Desktop Navigation -->
-                <div class="hidden md:flex space-x-6">
-                    <a href="#home" class="nav-link text-white hover:text-indigo-500 transition-colors">Home</a>
-                    <a href="#about" class="nav-link text-white hover:text-indigo-500 transition-colors">About</a>
-                    <a href="#services" class="nav-link text-white hover:text-indigo-500 transition-colors">Services</a>
-                    <a href="#projects" class="nav-link text-white hover:text-indigo-500 transition-colors">Projects</a>
-                    <a href="#pricing" class="nav-link text-white hover:text-indigo-500 transition-colors">Pricing</a>
-                    <a href="#blog" class="nav-link text-white hover:text-indigo-500 transition-colors">Blog</a>
-                    <a href="#faq" class="nav-link text-white hover:text-indigo-500 transition-colors">FAQ</a>
-                    <a href="#contact" class="nav-link text-white hover:text-indigo-500 transition-colors">Contact</a>
+<body class="bg-gray-900 min-h-screen">
+    <!-- Services Grid Section -->
+    <section class="py-16 px-4 max-w-7xl mx-auto">
+        <h2 class="text-4xl font-bold text-white text-center mb-12">Services I Offer</h2>
+        
+        <!-- Services Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Web Development Card -->
+            <div class="bg-gray-800 rounded-xl p-6 transform hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 cursor-pointer group" onclick="showDetails('web-dev')">
+                <div class="h-12 w-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-500/30 transition-colors">
+                    <i data-lucide="globe" class="text-blue-400"></i>
                 </div>
-
-                <!-- Mobile Menu Button -->
-                <button id="menuBtn" class="md:hidden text-white">
-                    <i class="fas fa-bars text-2xl"></i>
+                <h3 class="text-xl font-bold text-white mb-3">Web Development</h3>
+                <p class="text-gray-400 mb-6">Custom websites and web applications built with modern technologies and best practices.</p>
+               
+                <button class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                    View Details
+                    <i data-lucide="chevron-right" class="h-4 w-4 ml-2"></i>
                 </button>
             </div>
 
-            <!-- Mobile Navigation -->
-            <div id="mobileMenu" class="hidden md:hidden bg-black/95 py-4">
-                <div class="flex flex-col space-y-4 px-4">
-                    <a href="#home" class="text-white hover:text-indigo-500">Home</a>
-                    <a href="#about" class="text-white hover:text-indigo-500">About</a>
-                    <a href="#services" class="text-white hover:text-indigo-500">Services</a>
-                    <a href="#projects" class="text-white hover:text-indigo-500">Projects</a>
-                    <a href="#pricing" class="text-white hover:text-indigo-500">Pricing</a>
-                    <a href="#blog" class="text-white hover:text-indigo-500">Blog</a>
-                    <a href="#faq" class="text-white hover:text-indigo-500">FAQ</a>
-                    <a href="#contact" class="text-white hover:text-indigo-500">Contact</a>
+            <!-- Mobile Development Card -->
+            <div class="bg-gray-800 rounded-xl p-6 transform hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20 cursor-pointer group" onclick="showDetails('mobile-dev')">
+                <div class="h-12 w-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-purple-500/30 transition-colors">
+                    <i data-lucide="smartphone" class="text-purple-400"></i>
                 </div>
+                <h3 class="text-xl font-bold text-white mb-3">Mobile App Development</h3>
+                <p class="text-gray-400 mb-6">Native and cross-platform mobile applications for iOS and Android platforms.</p>
+                <button class="flex items-center text-purple-400 hover:text-purple-300 transition-colors">
+                    View Details
+                    <i data-lucide="chevron-right" class="h-4 w-4 ml-2"></i>
+                </button>
             </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="pt-24 min-h-screen relative overflow-hidden">
-        <!-- Animated Background Blobs -->
-        <div class="absolute top-0 left-0 w-full h-full -z-10 overflow-hidden">
-            <div class="blob absolute top-1/4 left-1/4 w-64 h-64 bg-indigo-500/30 rounded-full blur-3xl"></div>
-            <div class="blob absolute top-1/3 right-1/4 w-64 h-64 bg-pink-500/30 rounded-full blur-3xl"></div>
-            <div class="blob absolute bottom-1/4 left-1/3 w-64 h-64 bg-purple-500/30 rounded-full blur-3xl"></div>
-        </div>
-
-        <div class="max-w-7xl mx-auto px-4 py-12">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <!-- Left Column -->
-                <div class="space-y-8">
-                    <!-- Social Links -->
-                    <div class="flex space-x-6 animate-slide-right" style="animation-delay: 0.2s">
-                        <a href="#" class="text-indigo-500 hover:text-pink-500 transition-colors">
-                            <i class="fab fa-facebook text-2xl"></i>
-                        </a>
-                        <a href="#" class="text-indigo-500 hover:text-pink-500 transition-colors">
-                            <i class="fab fa-instagram text-2xl"></i>
-                        </a>
-                        <a href="#" class="text-indigo-500 hover:text-pink-500 transition-colors">
-                            <i class="fab fa-linkedin text-2xl"></i>
-                        </a>
-                        <a href="#" class="text-indigo-500 hover:text-pink-500 transition-colors">
-                            <i class="far fa-envelope text-2xl"></i>
-                        </a>
-                    </div>
-
-                    <!-- Main Content -->
-                    <div class="space-y-4 animate-slide-right" style="animation-delay: 0.4s">
-                        <h1 class="text-4xl md:text-6xl font-bold text-white">
-                            I'm a <span class="gradient-text">Software</span>
-                            <span class="gradient-text">Developer</span>
-                        </h1>
-                        <p class="text-gray-300 text-lg max-w-xl">
-                            Hello! I'm Nduduzo Ndlovu, a dedicated developer passionate about crafting
-                            exceptional digital experiences through innovative solutions.
-                        </p>
-                    </div>
-
-                    <!-- CTA Buttons -->
-                    <div class="flex space-x-4 animate-slide-right" style="animation-delay: 0.6s">
-                        <button class="px-8 py-3 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transform hover:scale-105 transition-all">
-                            Hire Me
-                        </button>
-                        <button class="px-8 py-3 border-2 border-indigo-500 text-white rounded-full hover:bg-indigo-500/20 transform hover:scale-105 transition-all">
-                            Download CV
-                        </button>
-                    </div>
+            <!-- Software Development Card -->
+            <div class="bg-gray-800 rounded-xl p-6 transform hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/20 cursor-pointer group" onclick="showDetails('software-dev')">
+                <div class="h-12 w-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-green-500/30 transition-colors">
+                    <i data-lucide="code" class="text-green-400"></i>
                 </div>
+                <h3 class="text-xl font-bold text-white mb-3">Software Development</h3>
+                <p class="text-gray-400 mb-6">Custom software solutions tailored to your business needs and requirements.</p>
+                <button class="flex items-center text-green-400 hover:text-green-300 transition-colors">
+                    View Details
+                    <i data-lucide="chevron-right" class="h-4 w-4 ml-2"></i>
+                </button>
+            </div>
 
-                <!-- Right Column - Image -->
-                <div class="relative animate-slide-up floating" style="animation-delay: 0.8s">
-                    <div class="absolute inset-0 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full blur-3xl opacity-20"></div>
-                    <img src="images/home.png"  alt="Profile" class="relative z-999 w-full h-auto rounded-3xl shadow-2xl">
+            <!-- Backend & Cloud Card -->
+            <div class="bg-gray-800 rounded-xl p-6 transform hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/20 cursor-pointer group" onclick="showDetails('cloud-dev')">
+                <div class="h-12 w-12 bg-orange-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-orange-500/30 transition-colors">
+                    <i data-lucide="cloud" class="text-orange-400"></i>
                 </div>
+                <h3 class="text-xl font-bold text-white mb-3">Backend & Cloud Services</h3>
+                <p class="text-gray-400 mb-6">Scalable backend solutions and cloud infrastructure management.</p>
+                <button class="flex items-center text-orange-400 hover:text-orange-300 transition-colors">
+                    View Details
+                    <i data-lucide="chevron-right" class="h-4 w-4 ml-2"></i>
+                </button>
+            </div>
+
+            <!-- Consulting Card -->
+            <div class="bg-gray-800 rounded-xl p-6 transform hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-pink-500/20 cursor-pointer group" onclick="showDetails('consulting')">
+                <div class="h-12 w-12 bg-pink-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-pink-500/30 transition-colors">
+                    <i data-lucide="graduation-cap" class="text-pink-400"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Consulting & Training</h3>
+                <p class="text-gray-400 mb-6">Technical consulting and team training in modern development practices.</p>
+                <button class="flex items-center text-pink-400 hover:text-pink-300 transition-colors">
+                    View Details
+                    <i data-lucide="chevron-right" class="h-4 w-4 ml-2"></i>
+                </button>
             </div>
         </div>
     </section>
 
+    <!-- Service Details Modal -->
+    <div id="serviceModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4">
+        <div class="bg-gray-800 rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-6">
+                    <h3 id="modalTitle" class="text-2xl font-bold text-white"></h3>
+                    <button onclick="hideDetails()" class="text-gray-400 hover:text-white">
+                        <i data-lucide="x" class="h-6 w-6"></i>
+                    </button>
+                </div>
+                <div id="modalContent"></div>
+            </div>
+        </div>
+    </div>
+
     <script>
-        // Mobile Menu Toggle
-        const menuBtn = document.getElementById('menuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            const icon = menuBtn.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-times');
-        });
+    lucide.createIcons();
+    const serviceDetails = {
+     
+        'web-dev': {
+                title: 'Web Development',
+                description: `<div class="space-y-6">
+                    <p class="text-gray-300">End-to-end web development services including frontend, backend, and database design. Specializing in responsive, performant, and accessible web applications.</p>
+                    
+                    <div class="space-y-2">
+                        <h4 class="text-lg font-semibold text-white">Technologies</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">HTML5</span>
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">CSS3</span>
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">JavaScript</span>
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">React</span>
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">Node.js</span>
+                        </div>
+                    </div>
 
-        // Smooth Scroll for Navigation Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                    // Close mobile menu if open
-                    mobileMenu.classList.add('hidden');
-                    menuBtn.querySelector('i').classList.add('fa-bars');
-                    menuBtn.querySelector('i').classList.remove('fa-times');
-                }
-            });
-        });
+                    <div class="space-y-2">
+                        <h4 class="text-lg font-semibold text-white">Pricing Range</h4>
+                        <p class="text-gray-300">$5,000 - $25,000 depending on project scope</p>
+                    </div>
 
-        // Intersection Observer for Scroll Animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-slide-up');
-                }
-            });
-        }, { threshold: 0.1 });
+                    <div class="space-y-2">
+                        <h4 class="text-lg font-semibold text-white">Past Projects</h4>
+                        <ul class="list-disc list-inside text-gray-300 space-y-1">
+                            <li>E-commerce Platform</li>
+                            <li>Business Dashboard</li>
+                            <li>Social Media Application</li>
+                        </ul>
+                    </div>
 
-        document.querySelectorAll('.animate-slide-up').forEach((el) => observer.observe(el));
-    </script>
+                    <button class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                        Contact for Inquiry
+                    </button>
+                </div>`
+            },
+            'mobile-dev': {
+            title: 'Mobile App Development',
+            description: `<div class="space-y-6">
+                <p class="text-gray-300">Development of native and cross-platform mobile applications for iOS and Android using modern frameworks.</p>
+                
+                <div class="space-y-2">
+                    <h4 class="text-lg font-semibold text-white">Technologies</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Flutter</span>
+                        <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">React Native</span>
+                        <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Swift</span>
+                        <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Kotlin</span>
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <h4 class="text-lg font-semibold text-white">Pricing Range</h4>
+                    <p class="text-gray-300">$8,000 - $50,000 depending on complexity</p>
+                </div>
+
+                <div class="space-y-2">
+                    <h4 class="text-lg font-semibold text-white">Past Projects</h4>
+                    <ul class="list-disc list-inside text-gray-300 space-y-1">
+                        <li>Health & Fitness App</li>
+                        <li>On-Demand Delivery Service</li>
+                        <li>Education & E-Learning App</li>
+                    </ul>
+                </div>
+
+                <button class="w-full bg-purple-500 hover:bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                    Contact for Inquiry
+                </button>
+            </div>`
+        },
+        'software-dev': {
+            title: 'Software Development',
+            description: `
+                <p class="text-gray-300">Custom-built software solutions, including enterprise applications, automation tools, and desktop applications.</p>
+                <div class="space-y-2">
+                    <h4 class="text-lg font-semibold text-white">Technologies</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm">Java</span>
+                        <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm">C#</span>
+                        <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm">Electron</span>
+                    </div>
+                </div>
+                <h4 class="text-lg font-semibold text-white mt-4">Pricing Range</h4>
+                <p class="text-gray-300">$10,000 - $100,000 based on scale</p>
+           <div class="space-y-2">
+                    <h4 class="text-lg font-semibold text-white">Past Projects</h4>
+                    <ul class="list-disc list-inside text-gray-300 space-y-1">
+                        <li>Health & Fitness App</li>
+                        <li>On-Demand Delivery Service</li>
+                        <li>Education & E-Learning App</li>
+                    </ul>
+                </div>
+
+                <button class="w-full bg-purple-500 hover:bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                    Contact for Inquiry
+                </button>
+            </div>`
+        },
+        'cloud-dev': {
+            title: 'Backend & Cloud Services',
+            description: `
+                <p class="text-gray-300">Scalable backend solutions and cloud infrastructure management, including APIs, DevOps, and serverless architectures.</p>
+                <div class="space-y-2">
+                    <h4 class="text-lg font-semibold text-white">Technologies</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-sm">AWS</span>
+                        <span class="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-sm">Google Cloud</span>
+                        <span class="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-sm">Azure</span>
+                        <span class="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-sm">Firebase</span>
+                    </div>
+                </div>
+                <h4 class="text-lg font-semibold text-white mt-4">Pricing Range</h4>
+                <p class="text-gray-300">$3,000 - $30,000 depending on cloud services required</p>
+            <div class="space-y-2">
+                    <h4 class="text-lg font-semibold text-white">Past Projects</h4>
+                    <ul class="list-disc list-inside text-gray-300 space-y-1">
+                        <li>Health & Fitness App</li>
+                        <li>On-Demand Delivery Service</li>
+                        <li>Education & E-Learning App</li>
+                    </ul>
+                </div>
+
+                <button class="w-full bg-purple-500 hover:bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                    Contact for Inquiry
+                </button>
+            </div>`
+        },
+        'consulting': {
+            title: 'Consulting & Training',
+            description: `
+                <p class="text-gray-300">Providing expert consulting and hands-on training for teams in modern software development methodologies.</p>
+                <div class="space-y-2">
+                    <h4 class="text-lg font-semibold text-white">Focus Areas</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-pink-500/20 text-pink-300 rounded-full text-sm">Agile Development</span>
+                        <span class="px-3 py-1 bg-pink-500/20 text-pink-300 rounded-full text-sm">Code Reviews</span>
+                        <span class="px-3 py-1 bg-pink-500/20 text-pink-300 rounded-full text-sm">Software Architecture</span>
+                        <span class="px-3 py-1 bg-pink-500/20 text-pink-300 rounded-full text-sm">DevOps</span>
+                    </div>
+                </div>
+                <h4 class="text-lg font-semibold text-white mt-4">Pricing Range</h4>
+                <p class="text-gray-300">$100/hr - $500/hr depending on expertise required</p>
+           <div class="space-y-2">
+                    <h4 class="text-lg font-semibold text-white">Past Projects</h4>
+                    <ul class="list-disc list-inside text-gray-300 space-y-1">
+                        <li>Health & Fitness App</li>
+                        <li>On-Demand Delivery Service</li>
+                        <li>Education & E-Learning App</li>
+                    </ul>
+                </div>
+
+                <button class="w-full bg-purple-500 hover:bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                    Contact for Inquiry
+                </button>
+            </div>`
+        }
+    };
+
+    // Show service details dynamically
+    function showDetails(serviceId) {
+        const modal = document.getElementById('serviceModal');
+        const title = document.getElementById('modalTitle');
+        const content = document.getElementById('modalContent');
+
+        const details = serviceDetails[serviceId];
+        title.textContent = details.title;
+        content.innerHTML = details.description;
+
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+    }
+
+    // Hide service details
+    function hideDetails() {
+        const modal = document.getElementById('serviceModal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    }
+
+    // Close modal when clicking outside
+    document.getElementById('serviceModal').addEventListener('click', function (e) {
+        if (e.target === this) {
+            hideDetails();
+        }
+    });
+</script>
+
+    
 </body>
 </html>
