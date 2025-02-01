@@ -8,11 +8,9 @@
     <link rel="stylesheet" href="background.scss">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    
-
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
      
-      
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Nduduzo Ndlovu</title>
     <style>
         table {
@@ -44,125 +42,176 @@
     }
 
       .icon-button.active {
-    color: rgb(159, 182, 243);
+    color: rgb(240, 83, 83);
   }
        .icon-button.active  span{
         font-weight: bold;
       }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      .project-container {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        .project-card {
-            width: 100%;
-            max-width: 1200px;
-            height: 80vh;
-            background-color: #112240;
-            border-radius: 15px;
-            display: flex;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-            overflow: hidden;
-            transition: transform 0.3s ease;
+      .glow {
+            filter: drop-shadow(0 0 10px rgba(0, 0, 255, 0.6));
         }
         .project-card:hover {
             transform: scale(1.02);
+            transition: transform 0.3s ease;
         }
-        .project-image {
-            width: 40%;
-            background-size: cover;
-            background-position: center;
-            border-radius:10px;
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
         }
-        .project-content {
-            width: 60%;
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .project-title {
-            font-size: 2.5rem;
-            color: #64ffda;
-        }
-        .project-links {
-            display: flex;
-            gap: 15px;
-        }
-        .project-links a {
-            color: #e6f1ff;
-            text-decoration: none;
-            font-size: 1.5rem;
-        }
-        .project-description {
-            margin: 20px 0;
-            line-height: 1.6;
-            color: #a8b2d1;
-        }
-        .project-technologies {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-        .tech-tag {
-            background-color: #233554;
-            color: #64ffda;
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-        }
-        .project-cta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .cta-button {
-            background-color: #64ffda;
-            color: #0a192f;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .cta-button:hover {
-            background-color: #8cffd8;
-        }
+.project-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.project-card {
+    width: 100%;
+    max-width: 1200px;
+    min-height: 500px;
+    height: auto;
+    /* background-color: #112240; */
+    border-radius: 15px;
+    display: flex;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+}
+
+.project-image {
+    width: 40%;
+    max-height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.project-content {
+    width: 60%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-title {
+    font-size: clamp(1rem, 2vw, 2rem);
+    color:rgb(224, 224, 224) ;
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+}
+
+.project-links a {
+    color: #e6f1ff;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.project-description {
+    margin: 20px 0;
+    line-height: 1.6;
+    color: #a8b2d1;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tech-tag {
+    background-color: #233554;
+    color: whitesmoke;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+}
+
+.project-cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cta-button {
+    background-color: rgba(56,60,101,1);
+    color: whitesmoke;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+}
+
+.cta-button:hover {
+    background-color: rgb(69, 71, 99);
+}
+
+/* Responsive Breakpoints */
+@media screen and (max-width: 968px) {
+    .project-card {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .project-image {
+        width: 100%;
+        height: 300px;
+    }
+    
+    .project-content {
+        width: 100%;
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .project-container {
+        padding: 10px;
+    }
+    
+    .project-content {
+        padding: 20px;
+    }
+    
+    .project-cta {
+        justify-content: center;
+    }
+    
+    .project-stats {
+        width: 100%;
+        text-align: center;
+    }
+}
     </style>
 </head>
 <body>
     <div  class="header-nav">
-        <div style="display: flex;align-items: center; padding-left: 15px; color:rgb(240, 83, 83); font-family: 'Times New Roman', Times, serif;font-size: 30px;font-weight:bolder;">
-        <h1 class="developer">Solace...</h1>
+        <div style="display: flex;align-items: center; padding-left: 15px; color:rgb(255, 255, 255); font-family: 'Times New Roman', Times, serif;font-size: 30px;font-weight:bolder;">
+        <h1 class="developer">NDUDUZO <span>NDLOVU.</span></h1>
     </div>
     <div class="mobile-only">
     <a href="#" class="menu-icon">&#9776;</a>
@@ -202,18 +251,18 @@
     <div class="left-container">
         <div class="row-one">
             <table   style="width:30%;">
-                <tr>
-                    <td><a href="#"><i class="fab fa-facebook  text-blue-500 glow"></i></a></td>
-                    <td><a href="#"><i class="fab fa-instagram text-indigo-500 glow"></i></a></td>
-                    <td><a href="#"><i class="fab fa-linkedin text-indigo-500 glow"></i></a></td>
-                    <td><a href="#"><i class="far fa-envelope text-indigo-500 glow"></i></a></td>
+                <tr >
+                    <td><a href="#"><i style="color:rgb(240, 83, 83);" class="fab fa-facebook  glow"></i></a></td>
+                    <td><a href="#"><i style="color:rgb(240, 83, 83);" class="fab fa-instagram  glow"></i></a></td>
+                    <td><a href="#"><i style="color:rgb(240, 83, 83);" class="fab fa-linkedin  glow"></i></a></td>
+                    <td><a href="#"><i style="color:rgb(240, 83, 83);" class="far fa-envelope  glow"></i></a></td>
                 </tr>
             </table>
         </div>
         <div class="row-two">
             <!-- <br/> -->
             <h1  class="topic">
-                <span>I'm a</span> <span>  Software </span>  <span> Developer </span> <span>|</span>  
+                <span>I'm a</span> <span>  Software </span>  <span style="color:rgb(240, 83, 83);"> Developer </span> <span style="color:rgb(240, 83, 83);">|</span>  
             </h1>
         </div>
         <div class="row-three">
@@ -266,12 +315,12 @@
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="images/about.png"/>
+                <img src="images/abou.png"/>
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
                 <p>
-                    I'm <strong  style="color:#0066ff ">Nduduzo Ndlovu </strong>, 
+                    I'm <strong  style="color:rgb(240, 83, 83) ">Nduduzo Ndlovu </strong>, 
                     a dedicated software developer skilled at creating smart solutions. 
                     I focus on making top-notch, user-friendly software through constant learning and creative thinking
                 </p>
@@ -305,49 +354,60 @@
     </div>
 </section>
 
-<!-- --------------------Services-------------------------------- -->
 
-<section class="services" id="services">
-    <div class="max-width">
-      <h2 class="title">My services</h2>
+  <section id="services" class="py-20 colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-12 text-white">My Services</h2>
 
-      <div class="serv-content">
 
-        <div class="card">
-          <div class="box">
-            <i class="fas fa-laptop-code"></i>
-            <div class="text">Web & Apps Development</div>
-            <p>Creating websites that look great and work flawlessly. Bringing your ideas to life with clean and functional web development.</p>
-          </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
+            <div class="bg-gray-700 p-6 rounded-lg shadow-lg" style="background-color: rgba(56,60,101,1) ;">
+                <i class="fas fa-laptop-code text-4xl text-indigo-500 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Web & App Development</h3>
+                <p>Creating websites and apps that look great and work flawlessly.</p>
+            </div>
+            <div class="bg-gray-700 p-6 rounded-lg shadow-lg" style="background-color: rgba(56,60,101,1) ;">
+                <i class="fas fa-user-secret text-4xl text-indigo-500 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Application-level Encryption</h3>
+                <p>Skilled in deploying application-level encryption methods.</p>
+            </div>
+            <div class="bg-gray-700 p-6 rounded-lg shadow-lg" style="background-color: rgba(56,60,101,1) ;">
+                <i class="fas fa-code text-4xl text-indigo-500 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">UI/UX Design</h3>
+                <p>Designing interfaces that captivate and function seamlessly.</p>
+            </div>
+
+
+
+
+
+            <div class="bg-gray-700 p-6 rounded-lg shadow-lg" style="background-color: rgba(56,60,101,1) ;">
+                <i class="fas fa-laptop-code text-4xl text-indigo-500 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Web & App Development</h3>
+                <p>Creating websites and apps that look great and work flawlessly.</p>
+            </div>
+            <div class="bg-gray-700 p-6 rounded-lg shadow-lg" style="background-color: rgba(56,60,101,1) ;">
+                <i class="fas fa-user-secret text-4xl text-indigo-500 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Application-level Encryption</h3>
+                <p>Skilled in deploying application-level encryption methods.</p>
+            </div>
+            <div class="bg-gray-700 p-6 rounded-lg shadow-lg" style="background-color: rgba(56,60,101,1) ;">
+                <i class="fas fa-code text-4xl text-indigo-500 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">UI/UX Design</h3>
+                <p>Designing interfaces that captivate and function seamlessly.</p>
+            </div>
         </div>
-
-        <div class="card">
-          <div class="box">
-            <i class="fas fa-user-secret"></i>
-            <div class="text">Application-level Encryption</div>
-            <p>Skilled in deploying application-level encryption methods at a mid-level capacity, prioritizing data protection and privacy within software systems. Capable of integrating encryption practices effectively to enhance security measures and ensure data integrity.</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="box">
-            <i class="fas fa-code"></i>
-            <div class="text">UI/UX Design</div>
-            <p>Designing interfaces that captivate and function seamlessly. Transforming concepts into reality through sleek and efficient web design.</p>
-          </div>
-        </div>
-
-      </div>
     </div>
+</section>
+
+  <section  id="projects" style=" background-color: rgba(56,60,101,1) ;">
+    <br>
+    <h1 class="text-3xl font-bold text-center text-white">My Projects</h1>
   </section>
-
-
-
-    <section class="project" id="projects">   
+    <section class="project">   
+         
             <div class="project-list">
-                
-
-
               <div class="project-image" style="background-image: url('/images/projects/chats.png')"></div>
               <div class="project-content">
                   <div class="project-header">
@@ -358,72 +418,22 @@
                       A robust real-time communication platform enabling direct peer-to-peer messaging with advanced security features and seamless user experience.
                   </p>
                   <div class="project-technologies">
-                      <span class="tech-tag">WebRTC</span>
-                      <span class="tech-tag">React</span>
+                      <span class="tech-tag">Ionic</span>
+                      <span class="tech-tag">Angular</span>
                       <span class="tech-tag">Node.js</span>
-                      <span class="tech-tag">Socket.io</span>
+                      <span class="tech-tag">Firebase</span>
                   </div>
                   <div class="project-cta">
                       <div class="project-stats">
-                          <!-- Optional project statistics or metrics -->
-                      </div>
-                      <button class="cta-button">View Project Details</button>
-                  </div>
-              </div>
-               
-            </div>
-
-
-
-            <div class="project-list">
-              <div class="project-image" style="background-image: url('/images/projects/venue.jpg')"></div>
-        <div class="project-content">
-            <div class="project-header">
-                <h1 class="project-title">Venue Booking Platform for Universities</h1>
-                
-            </div>
-            <p class="project-description">
-                Innovative venue booking system for university spaces and resources, streamlining the process of reserving and managing campus facilities with real-time availability tracking.
-            </p>
-            <div class="project-technologies">
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Express</span>
-                <span class="tech-tag">MongoDB</span>
-                <span class="tech-tag">Stripe</span>
-            </div>
-            <div class="project-cta">
-                <div class="project-stats">
-                    <!-- Optional project statistics or metrics -->
-                </div>
-                <button class="cta-button">View Project Details</button>
-            </div>
-        </div>
-            </div>
-
-            <div class="project-list">
-              <div class="project-image" style="background-image: url('/images/projects/sms.png')"></div>
-              <div class="project-content">
-                  <div class="project-header">
-                      <h1 class="project-title">Student Performance Management System</h1>
-                    
-                  </div>
-                  <p class="project-description">
-                      Comprehensive academic tracking and analytics platform designed to provide deep insights into student performance, learning patterns, and predictive academic success metrics.
-                  </p>
-                  <div class="project-technologies">
-                      <span class="tech-tag">Python</span>
-                      <span class="tech-tag">Django</span>
-                      <span class="tech-tag">PostgreSQL</span>
-                      <span class="tech-tag">Machine Learning</span>
-                  </div>
-                  <div class="project-cta">
-                      <div class="project-stats">
-                          <!-- Optional project statistics or metrics -->
+                        
                       </div>
                       <button class="cta-button">View Project Details</button>
                   </div>
               </div>
             </div>
+            
+
+           
         
             <div class="project-list">
               <div class="project-image" style="background-image: url('/images/projects/bus.jpg')"></div>
@@ -432,7 +442,7 @@
                       <h1 class="project-title">Public Transport Ticketing and Payment System</h1>
                     
                   </div>
-                  
+
                   <p class="project-description">
                       Comprehensive academic tracking and analytics platform designed to provide deep insights into student performance, learning patterns, and predictive academic success metrics.
                   </p>
@@ -450,222 +460,154 @@
                   </div>
               </div>
             </div>
-
             <div class="project-list">
-              <div class="project-image" style="background-image: url('/images/projects/sms.png')"></div>
-              <div class="project-content">
-                  <div class="project-header">
-                      <h1 class="project-title">Wedding Planning and Scheduling System</h1>
-                    
-                  </div>
-                  <p class="project-description">
-                      Comprehensive academic tracking and analytics platform designed to provide deep insights into student performance, learning patterns, and predictive academic success metrics.
-                  </p>
-                  <div class="project-technologies">
-                      <span class="tech-tag">Python</span>
-                      <span class="tech-tag">Django</span>
-                      <span class="tech-tag">PostgreSQL</span>
-                      <span class="tech-tag">Machine Learning</span>
-                  </div>
-                  <div class="project-cta">
-                      <div class="project-stats">
-                          <!-- Optional project statistics or metrics -->
-                      </div>
-                      <button class="cta-button">View Project Details</button>
-                  </div>
-              </div>
-            </div>
-
-            <div class="project-list">
-              <div class="project-image" style="background-image: url('/images/projects/sms.png')"></div>
-              <div class="project-content">
-                  <div class="project-header">
-                      <h1 class="project-title">Cleaning Products E-Commerce Store</h1>
-                    
-                  </div>
-                  <p class="project-description">
-                      Comprehensive academic tracking and analytics platform designed to provide deep insights into student performance, learning patterns, and predictive academic success metrics.
-                  </p>
-                  <div class="project-technologies">
-                      <span class="tech-tag">Python</span>
-                      <span class="tech-tag">Django</span>
-                      <span class="tech-tag">PostgreSQL</span>
-                      <span class="tech-tag">Machine Learning</span>
-                  </div>
-                  <div class="project-cta">
-                      <div class="project-stats">
-                          <!-- Optional project statistics or metrics -->
-                      </div>
-                      <button class="cta-button">View Project Details</button>
-                  </div>
-              </div>
-            </div>
-
-            <div class="project-list">
-              <div class="project-image" style="background-image: url('/images/projects/sms.png')"></div>
-              <div class="project-content">
-                  <div class="project-header">
-                      <h1 class="project-title">Advanced Conference Management System</h1>
-                    
-                  </div>
-                  <p class="project-description">
-                      Comprehensive academic tracking and analytics platform designed to provide deep insights into student performance, learning patterns, and predictive academic success metrics.
-                  </p>
-                  <div class="project-technologies">
-                      <span class="tech-tag">Python</span>
-                      <span class="tech-tag">Django</span>
-                      <span class="tech-tag">PostgreSQL</span>
-                      <span class="tech-tag">Machine Learning</span>
-                  </div>
-                  <div class="project-cta">
-                      <div class="project-stats">
-                          <!-- Optional project statistics or metrics -->
-                      </div>
-                      <button class="cta-button">View Project Details</button>
-                  </div>
-              </div>
-            </div>
-
-            <div class="project-list">
-              <div class="project-image" style="background-image: url('/images/projects/sms.png')"></div>
-              <div class="project-content">
-                  <div class="project-header">
-                      <h1 class="project-title">Smart Student Attendance Management Application</h1>
-                    
-                  </div>
-                  <p class="project-description">
-                      Comprehensive academic tracking and analytics platform designed to provide deep insights into student performance, learning patterns, and predictive academic success metrics.
-                  </p>
-                  <div class="project-technologies">
-                      <span class="tech-tag">Python</span>
-                      <span class="tech-tag">Django</span>
-                      <span class="tech-tag">PostgreSQL</span>
-                      <span class="tech-tag">Machine Learning</span>
-                  </div>
-                  <div class="project-cta">
-                      <div class="project-stats">
-                          <!-- Optional project statistics or metrics -->
-                      </div>
-                      <button class="cta-button">View Project Details</button>
-                  </div>
-              </div>
-            </div>
-
-
-            <div class="project-list">
-              <div class="project-image" style="background-image: url('/images/projects/sms.png')"></div>
-              <div class="project-content">
-                  <div class="project-header">
-                      <h1 class="project-title">Comprehensive Job Application and Interview Scheduler</h1>
-                    
-                  </div>
-                  <p class="project-description">
-                      Comprehensive academic tracking and analytics platform designed to provide deep insights into student performance, learning patterns, and predictive academic success metrics.
-                  </p>
-                  <div class="project-technologies">
-                      <span class="tech-tag">Python</span>
-                      <span class="tech-tag">Django</span>
-                      <span class="tech-tag">PostgreSQL</span>
-                      <span class="tech-tag">Machine Learning</span>
-                  </div>
-                  <div class="project-cta">
-                      <div class="project-stats">
-                          <!-- Optional project statistics or metrics -->
-                      </div>
-                      <button class="cta-button">View Project Details</button>
-                  </div>
-              </div>
-            </div>
-
-            <div class="project-list">
-              <div class="project-image" style="background-image: url('/images/projects/sms.png')"></div>
-              <div class="project-content">
-                  <div class="project-header">
-                      <h1 class="project-title">Transparent and Secure Voting System</h1>
-                    
-                  </div>
-                  <p class="project-description">
-                      Comprehensive academic tracking and analytics platform designed to provide deep insights into student performance, learning patterns, and predictive academic success metrics.
-                  </p>
-                  <div class="project-technologies">
-                      <span class="tech-tag">Python</span>
-                      <span class="tech-tag">Django</span>
-                      <span class="tech-tag">PostgreSQL</span>
-                      <span class="tech-tag">Machine Learning</span>
-                  </div>
-                  <div class="project-cta">
-                      <div class="project-stats">
-                          <!-- Optional project statistics or metrics -->
-                      </div>
-                      <button class="cta-button">View Project Details</button>
-                  </div>
-              </div>
-            </div>
-
-            <div class="project-list">
-              <div class="project-image" style="background-image: url('/images/projects/sms.png')"></div>
-              <div class="project-content">
-                  <div class="project-header">
-                      <h1 class="project-title">Research Funding Management Platform</h1>
-                    
-                  </div>
-                  <p class="project-description">
-                      Comprehensive academic tracking and analytics platform designed to provide deep insights into student performance, learning patterns, and predictive academic success metrics.
-                  </p>
-                  <div class="project-technologies">
-                      <span class="tech-tag">Python</span>
-                      <span class="tech-tag">Django</span>
-                      <span class="tech-tag">PostgreSQL</span>
-                      <span class="tech-tag">Machine Learning</span>
-                  </div>
-                  <div class="project-cta">
-                      <div class="project-stats">
-                          <!-- Optional project statistics or metrics -->
-                      </div>
-                      <button class="cta-button">View Project Details</button>
-                  </div>
-              </div>
-            </div>
-
-            <div class="project-list">
-              <div class="project-image" style="background-image: url('/images/projects/sms.png')"></div>
-              <div class="project-content">
-                  <div class="project-header">
-                      <h1 class="project-title">Conference Video Sharing and Collaboration Platform</h1>
+                <div class="project-image" style="background-image: url('/images/projects/sms.png')"></div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h1 class="project-title">Cleaning Products E-Commerce Store</h1>
                       
-                  </div>
-                  <p class="project-description">
-                      Comprehensive academic tracking and analytics platform designed to provide deep insights into student performance, learning patterns, and predictive academic success metrics.
-                  </p>
-                  <div class="project-technologies">
-                      <span class="tech-tag">Python</span>
-                      <span class="tech-tag">Django</span>
-                      <span class="tech-tag">PostgreSQL</span>
-                      <span class="tech-tag">Machine Learning</span>
-                  </div>
-                  <div class="project-cta">
-                      <div class="project-stats">
-                          <!-- Optional project statistics or metrics -->
-                      </div>
-                      <button class="cta-button">View Project Details</button>
-                  </div>
+                    </div>
+                    <p class="project-description">
+                        Comprehensive academic tracking and analytics platform designed to provide deep insights into student performance, learning patterns, and predictive academic success metrics.
+                    </p>
+                    <div class="project-technologies">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Machine Learning</span>
+                    </div>
+                    <div class="project-cta">
+                        <div class="project-stats">
+                            
+                        </div>
+                        <button class="cta-button">View Project Details</button>
+                    </div>
+                </div>
               </div>
-            </div>
 
+              <div class="project-list">
+                <div class="project-image" style="background-image: url('/images/projects/sms.png')"></div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h1 class="project-title">Cleaning Products E-Commerce Store</h1>
+                      
+                    </div>
+                    <p class="project-description">
+                        Comprehensive academic tracking and analytics platform designed to provide deep insights into student performance, learning patterns, and predictive academic success metrics.
+                    </p>
+                    <div class="project-technologies">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Machine Learning</span>
+                    </div>
+                    <div class="project-cta">
+                        <div class="project-stats">
+                            
+                        </div>
+                        <button class="cta-button">View Project Details</button>
+                    </div>
+                </div>
+              </div>
+           
 
-
-
-
-
-
-
-
-
-
-
-            
         </section>
 
+<section>
+    <button class="px-5 py-2 bg-indigo-600 text-white text-lg rounded-lg hover:bg-indigo-700 transition duration-300">
+        More
+    </button>
+    
+</section>
+
+
+
+
+
+
+
+
+
+        <section id="projects" class="py-8 sm:py-12 md:py-16 lg:py-20 bg-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-white">My Projects</h2>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+                    <!-- Project Card 1 -->
+                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+                        <div class="aspect-w-16 aspect-h-9 mb-4">
+                            <img src="images/projects/chats.png" alt="Project" class="rounded-lg w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-semibold mb-2 text-white">Real-Time Chat App</h3>
+                        <p class="mb-4 text-gray-300 text-sm sm:text-base">A robust real-time communication platform enabling direct peer-to-peer messaging.</p>
+                        <a href="#" class="inline-block text-indigo-500 hover:text-indigo-400 hover:underline transition duration-300">View Details</a>
+                    </div>
+        
+                    <!-- Project Card 2 -->
+                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+                        <div class="aspect-w-16 aspect-h-9 mb-4">
+                            <img src="images/projects/chats.png" alt="Project" class="rounded-lg w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-semibold mb-2 text-white">Real-Time Chat App</h3>
+                        <p class="mb-4 text-gray-300 text-sm sm:text-base">A robust real-time communication platform enabling direct peer-to-peer messaging.</p>
+                        <a href="#" class="inline-block text-indigo-500 hover:text-indigo-400 hover:underline transition duration-300">View Details</a>
+                    </div>
+        
+                    <!-- Project Card 3 -->
+                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+                        <div class="aspect-w-16 aspect-h-9 mb-4">
+                            <img src="images/projects/chats.png" alt="Project" class="rounded-lg w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-semibold mb-2 text-white">Real-Time Chat App</h3>
+                        <p class="mb-4 text-gray-300 text-sm sm:text-base">A robust real-time communication platform enabling direct peer-to-peer messaging.</p>
+                        <a href="#" class="inline-block text-indigo-500 hover:text-indigo-400 hover:underline transition duration-300">View Details</a>
+                    </div>
+        
+                    <!-- Project Card 4 -->
+                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+                        <div class="aspect-w-16 aspect-h-9 mb-4">
+                            <img src="images/projects/chats.png" alt="Project" class="rounded-lg w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-semibold mb-2 text-white">Real-Time Chat App</h3>
+                        <p class="mb-4 text-gray-300 text-sm sm:text-base">A robust real-time communication platform enabling direct peer-to-peer messaging.</p>
+                        <a href="#" class="inline-block text-indigo-500 hover:text-indigo-400 hover:underline transition duration-300">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-20 bg-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-12">Pricing</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-4">Basic</h3>
+                        <p class="text-4xl font-bold mb-4">$99</p>
+                        <ul class="mb-4">
+                            <li>1 Project</li>
+                            <li>Basic Support</li>
+                        </ul>
+                        <a href="#" class="bg-indigo-500 text-white px-6 py-3 rounded-lg hover:bg-indigo-600">Get Started</a>
+                    </div>
+                    <!-- Add more pricing plans here -->
+                </div>
+            </div>
+        </section>
+    
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 bg-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-12">Testimonials</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="testimonial-card p-6 rounded-lg">
+                        <p class="mb-4">"Nduduzo is an amazing developer! He delivered my project on time and exceeded my expectations."</p>
+                        <p class="font-semibold">- Client Name</p>
+                    </div>
+                    <!-- Add more testimonials here -->
+                </div>
+            </div>
+        </section>
 
 
     <section id="contact">
@@ -799,7 +741,14 @@
             link.click();
         });
         
-
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
 
 
 </script>

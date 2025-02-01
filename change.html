@@ -1,24 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Auto Changing Background Color</title>
-<style>
-    body {
-        animation: changeColor 6s infinite alternate; /* Change color every 5 seconds */
-    }
-
-    @keyframes changeColor {
-        0% { background-color: #45171d; }
-        25% { background-color: #18587a; }
-        50% { background-color: #d65a31; }
-        75% { background-color: #00aaa0; }
-        100% { background-color: #e8751a; }
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<body>
-    <!-- Your content here -->
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-[whitesmoke] shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-gray-900">My Portfolio</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button onclick="filterProjects('all')" class="filter-btn active px-4 py-2 rounded-lg text-sm font-medium">All</button>
+                    <button onclick="filterProjects('in-progress')" class="filter-btn px-4 py-2 rounded-lg text-sm font-medium">In Progress</button>
+                    <button onclick="filterProjects('completed')" class="filter-btn px-4 py-2 rounded-lg text-sm font-medium">Completed</button>
+                    <button onclick="filterProjects('hosting')" class="filter-btn px-4 py-2 rounded-lg text-sm font-medium">Waiting for Hosting</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Grid -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projectGrid">
+            <!-- Project cards will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
+        <div class="bg-white rounded-lg max-w-3xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div class="p-6" id="modalContent">
+                <!-- Modal content will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+  const projects = [
+    {
+        id: 1,
+        name: "Real-Time Peer-to-Peer Chat Application",
+        description: "A robust real-time communication platform enabling direct peer-to-peer messaging with advanced security features and seamless user experience.",
+        timeline: "5 months",
+        cost: "$10,000",
+        status: "completed",
+        tags: ["Ionic", "Angular", "Node.js", "Firebase"],
+        url: "https://example.com/chat-app",
+        image: "/images/projects/chats.png",
+        completion: 100
+    },
+    {
+        id: 2,
+        name: "Public Transport Ticketing and Payment System",
+        description: "A smart ticketing system allowing digital payments, real-time fare calculations, and seamless public transport management.",
+        timeline: "6 months",
+        cost: "$12,000",
+        status: "in-progress",
+        tags: ["Python", "Django", "PostgreSQL", "Machine Learning"],
+        url: "https://example.com/ticketing",
+        image: "/images/projects/bus.jpg",
+        completion: 75
+    },
+    {
+        id: 3,
+        name: "Cleaning Products E-Commerce Store",
+        description: "A feature-rich e-commerce store for cleaning products, including inventory management, secure checkout, and customer reviews.",
+        timeline: "4 months",
+        cost: "$9,000",
+        status: "completed",
+        tags: ["Python", "Django", "PostgreSQL"],
+        url: "https://example.com/ecommerce",
+        image: "/images/projects/sms.png",
+        completion: 100
+    },
+    {
+        id: 4,
+        name: "Wedding Planning and Scheduling System",
+        description: "A platform to help users plan weddings, manage guest lists, and schedule vendors efficiently.",
+        timeline: "5 months",
+        cost: "$11,000",
+        status: "completed",
+        tags: ["Python", "Django", "PostgreSQL", "Machine Learning"],
+        url: "https://example.com/wedding-planner",
+        image: "/images/projects/th.jpg",
+        completion: 100
+    },
+    {
+        id: 5,
+        name: "Advanced Conference Management System",
+        description: "A system designed for organizing and managing conferences, with scheduling, registration, and video sharing features.",
+        timeline: "6 months",
+        cost: "$14,000",
+        status: "in-progress",
+        tags: ["Python", "Django", "PostgreSQL", "Machine Learning"],
+        url: "https://example.com/conference",
+        image: "/images/projects/sms.png",
+        completion: 60
+    },
+    {
+        id: 6,
+        name: "Student Performance Management System",
+        description: "A data-driven platform that tracks student performance, generates reports, and provides predictive analytics.",
+        timeline: "4 months",
+        cost: "$8,000",
+        status: "completed",
+        tags: ["Python", "Django", "PostgreSQL", "Machine Learning"],
+        url: "https://example.com/student-performance",
+        image: "/images/projects/sms.png",
+        completion: 100
+    },
+    {
+        id: 7,
+        name: "Smart Student Attendance Management Application",
+        description: "An automated attendance tracking system using biometric authentication and real-time reporting.",
+        timeline: "5 months",
+        cost: "$10,000",
+        status: "hosting",
+        tags: ["Python", "Django", "PostgreSQL", "Machine Learning"],
+        url: "https://example.com/attendance",
+        image: "/images/projects/sms.png",
+        completion: 95
+    },
+    {
+        id: 8,
+        name: "Comprehensive Job Application and Interview Scheduler",
+        description: "A job application tracker with interview scheduling and employer feedback integration.",
+        timeline: "6 months",
+        cost: "$13,000",
+        status: "in-progress",
+        tags: ["Python", "Django", "PostgreSQL", "Machine Learning"],
+        url: "https://example.com/job-scheduler",
+        image: "/images/projects/sms.png",
+        completion: 80
+    },
+    {
+        id: 9,
+        name: "Transparent and Secure Voting System",
+        description: "A blockchain-based voting system ensuring transparency, security, and real-time result tracking.",
+        timeline: "7 months",
+        cost: "$15,000",
+        status: "completed",
+        tags: ["Python", "Django", "PostgreSQL", "Machine Learning"],
+        url: "https://example.com/voting",
+        image: "/images/projects/sms.png",
+        completion: 100
+    },
+    {
+        id: 10,
+        name: "Research Funding Management Platform",
+        description: "A platform for managing and tracking research grants, fund disbursement, and proposal submissions.",
+        timeline: "6 months",
+        cost: "$12,500",
+        status: "completed",
+        tags: ["Python", "Django", "PostgreSQL", "Machine Learning"],
+        url: "https://example.com/research-funding",
+        image: "/images/projects/sms.png",
+        completion: 100
+    },
+    {
+        id: 11,
+        name: "Conference Video Sharing and Collaboration Platform",
+        description: "A video-sharing and collaboration platform specifically designed for conference attendees and speakers.",
+        timeline: "5 months",
+        cost: "$11,000",
+        status: "hosting",
+        tags: ["Python", "Django", "PostgreSQL", "Machine Learning"],
+        url: "https://example.com/conference-video",
+        image: "/images/projects/sms.png",
+        completion: 95
+    }
+];
+
+console.log(projects);
+
+        function getStatusColor(status) {
+            const colors = {
+                'completed': 'bg-green-100 text-green-800',
+                'in-progress': 'bg-yellow-100 text-yellow-800',
+                'hosting': 'bg-blue-100 text-blue-800'
+            };
+            return colors[status] || 'bg-gray-100 text-gray-800';
+        }
+
+        function createProjectCard(project) {
+            return `
+                <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden" data-status="${project.status}">
+                    <img src="${project.image}" alt="${project.name}" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-900">${project.name}</h3>
+                            <span class="px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(project.status)}">
+                                ${project.status.replace('-', ' ').toUpperCase()}
+                            </span>
+                        </div>
+                        <p class="text-gray-600 mb-4 line-clamp-3">${project.description}</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            ${project.tags.map(tag => `
+                                <span class="px-3 py-1 bg-gray-100 rounded-full text-sm font-medium text-gray-600">
+                                    ${tag}
+                                </span>
+                            `).join('')}
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button onclick="showProjectDetails(${project.id})" class="text-indigo-600 hover:text-indigo-800 font-medium">
+                                View Details
+                            </button>
+                            <div class="flex items-center">
+                                <i class="fas fa-clock text-gray-400 mr-2"></i>
+                                <span class="text-sm text-gray-600">${project.timeline}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function showProjectDetails(projectId) {
+            const project = projects.find(p => p.id === projectId);
+            const modal = document.getElementById('projectModal');
+            const modalContent = document.getElementById('modalContent');
+            
+            modalContent.innerHTML = `
+                <div class="flex justify-between items-start mb-6">
+                    <h2 class="text-2xl font-bold text-gray-900">${project.name}</h2>
+                    <button onclick="closeModal()" class="text-gray-400 hover:text-gray-500">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <img src="${project.image}" alt="${project.name}" class="w-full h-64 object-cover rounded-lg mb-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">Project Details</h3>
+                        <p class="text-gray-600">${project.description}</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-medium text-gray-700">Timeline</h4>
+                            <p class="text-gray-600">${project.timeline}</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-700">Cost</h4>
+                            <p class="text-gray-600">${project.cost}</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-700">Completion</h4>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-indigo-600 h-2.5 rounded-full" style="width: ${project.completion}%"></div>
+                            </div>
+                            <span class="text-sm text-gray-600">${project.completion}%</span>
+                        </div>
+                    </div>
+                </div>
+                ${project.url ? `
+                    <div class="border-t pt-6">
+                        <a href="${project.url}" target="_blank" class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">
+                            <i class="fas fa-external-link-alt mr-2"></i>
+                            View Live Project
+                        </a>
+                    </div>
+                ` : ''}
+            `;
+            
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('projectModal').classList.add('hidden');
+        }
+
+        function filterProjects(status) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active', 'bg-indigo-600', 'text-white'));
+            
+            const activeBtn = document.querySelector(`button[onclick="filterProjects('${status}')"]`);
+            activeBtn.classList.add('active', 'bg-indigo-600', 'text-white');
+
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                if (status === 'all' || card.dataset.status === status) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Initial render
+        document.getElementById('projectGrid').innerHTML = projects.map(createProjectCard).join('');
+        filterProjects('all');
+
+        // Close modal when clicking outside
+        document.getElementById('projectModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+    </script>
 </body>
 </html>
