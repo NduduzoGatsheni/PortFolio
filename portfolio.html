@@ -378,17 +378,17 @@
 
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
-            <div class="bg-gray-700 p-6 rounded-lg shadow-lg" style="background-color: rgba(56,60,101,1) ;">
+            <div class="bg-gray-700 p-6 rounded-lg shadow-lg" style="background-color: rgba(56,60,101,1) ;" onclick="showDetails('mobile-dev')">
                 <i class="fas fa-laptop-code text-4xl text-indigo-500 mb-4"></i>
                 <h3 class="text-xl font-semibold mb-2">Web & App Development</h3>
                 <p>Creating websites and apps that look great and work flawlessly.</p>
             </div>
-            <div class="bg-gray-700 p-6 rounded-lg shadow-lg" style="background-color: rgba(56,60,101,1) ;">
+            <div class="bg-gray-700 p-6 rounded-lg shadow-lg" style="background-color: rgba(56,60,101,1) ;"  onclick="showDetails('mobile-dev')">
                 <i class="fas fa-user-secret text-4xl text-indigo-500 mb-4"></i>
                 <h3 class="text-xl font-semibold mb-2">Application-level Encryption</h3>
                 <p>Skilled in deploying application-level encryption methods.</p>
             </div>
-            <div class="bg-gray-700 p-6 rounded-lg shadow-lg" style="background-color: rgba(56,60,101,1) ;">
+            <div class="bg-gray-700 p-6 rounded-lg shadow-lg" style="background-color: rgba(56,60,101,1) ;" onclick="showDetails('mobile-dev')">
                 <i class="fas fa-code text-4xl text-indigo-500 mb-4"></i>
                 <h3 class="text-xl font-semibold mb-2">UI/UX Design</h3>
                 <p>Designing interfaces that captivate and function seamlessly.</p>
@@ -400,18 +400,18 @@
 
             <div class="bg-gray-700 p-6 rounded-lg shadow-lg" style="background-color: rgba(56,60,101,1) ;">
                 <i class="fas fa-laptop-code text-4xl text-indigo-500 mb-4"></i>
-                <h3 class="text-xl font-semibold mb-2">Web & App Development</h3>
-                <p>Creating websites and apps that look great and work flawlessly.</p>
+                <h3 class="text-xl font-semibold mb-2">Software Development</h3>
+                <p>Custom software solutions tailored to your business needs and requirements.</p>
             </div>
             <div class="bg-gray-700 p-6 rounded-lg shadow-lg" style="background-color: rgba(56,60,101,1) ;">
                 <i class="fas fa-user-secret text-4xl text-indigo-500 mb-4"></i>
-                <h3 class="text-xl font-semibold mb-2">Application-level Encryption</h3>
-                <p>Skilled in deploying application-level encryption methods.</p>
+                <h3 class="text-xl font-semibold mb-2">Backend & Cloud Services</h3>
+                <p>Scalable backend solutions and cloud infrastructure management.</p>
             </div>
             <div class="bg-gray-700 p-6 rounded-lg shadow-lg" style="background-color: rgba(56,60,101,1) ;">
                 <i class="fas fa-code text-4xl text-indigo-500 mb-4"></i>
-                <h3 class="text-xl font-semibold mb-2">UI/UX Design</h3>
-                <p>Designing interfaces that captivate and function seamlessly.</p>
+                <h3 class="text-xl font-semibold mb-2">Consulting & Training</h3>
+                <p>Technical consulting and team training in modern development practices.</p>
             </div>
         </div>
     </div>
@@ -667,12 +667,30 @@
 
 
 
-        <section id="projects" class="py-8 sm:py-12 md:py-16 lg:py-20 bg-gray-900">
+        <!-- <section id="projects" class="py-8 sm:py-12 md:py-16 lg:py-20 bg-gray-900">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-white">My Projects</h2>
                 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-                    <!-- Project Card 1 -->
+             
+                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+                        <div class="aspect-w-16 aspect-h-9 mb-4">
+                            <img src="images/projects/chats.png" alt="Project" class="rounded-lg w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-semibold mb-2 text-white">Real-Time Chat App</h3>
+                        <p class="mb-4 text-gray-300 text-sm sm:text-base">A robust real-time communication platform enabling direct peer-to-peer messaging.</p>
+                        <a href="#" class="inline-block text-indigo-500 hover:text-indigo-400 hover:underline transition duration-300">View Details</a>
+                    </div>
+  
+                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+                        <div class="aspect-w-16 aspect-h-9 mb-4">
+                            <img src="images/projects/chats.png" alt="Project" class="rounded-lg w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-semibold mb-2 text-white">Real-Time Chat App</h3>
+                        <p class="mb-4 text-gray-300 text-sm sm:text-base">A robust real-time communication platform enabling direct peer-to-peer messaging.</p>
+                        <a href="#" class="inline-block text-indigo-500 hover:text-indigo-400 hover:underline transition duration-300">View Details</a>
+                    </div>
+    
                     <div class="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
                         <div class="aspect-w-16 aspect-h-9 mb-4">
                             <img src="images/projects/chats.png" alt="Project" class="rounded-lg w-full h-full object-cover">
@@ -682,27 +700,7 @@
                         <a href="#" class="inline-block text-indigo-500 hover:text-indigo-400 hover:underline transition duration-300">View Details</a>
                     </div>
         
-                    <!-- Project Card 2 -->
-                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
-                        <div class="aspect-w-16 aspect-h-9 mb-4">
-                            <img src="images/projects/chats.png" alt="Project" class="rounded-lg w-full h-full object-cover">
-                        </div>
-                        <h3 class="text-lg sm:text-xl font-semibold mb-2 text-white">Real-Time Chat App</h3>
-                        <p class="mb-4 text-gray-300 text-sm sm:text-base">A robust real-time communication platform enabling direct peer-to-peer messaging.</p>
-                        <a href="#" class="inline-block text-indigo-500 hover:text-indigo-400 hover:underline transition duration-300">View Details</a>
-                    </div>
-        
-                    <!-- Project Card 3 -->
-                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
-                        <div class="aspect-w-16 aspect-h-9 mb-4">
-                            <img src="images/projects/chats.png" alt="Project" class="rounded-lg w-full h-full object-cover">
-                        </div>
-                        <h3 class="text-lg sm:text-xl font-semibold mb-2 text-white">Real-Time Chat App</h3>
-                        <p class="mb-4 text-gray-300 text-sm sm:text-base">A robust real-time communication platform enabling direct peer-to-peer messaging.</p>
-                        <a href="#" class="inline-block text-indigo-500 hover:text-indigo-400 hover:underline transition duration-300">View Details</a>
-                    </div>
-        
-                    <!-- Project Card 4 -->
+                 
                     <div class="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
                         <div class="aspect-w-16 aspect-h-9 mb-4">
                             <img src="images/projects/chats.png" alt="Project" class="rounded-lg w-full h-full object-cover">
@@ -713,7 +711,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
     
         <!-- Pricing Section -->
         <section id="pricing" class="py-20 bg-gray-800">
