@@ -2,75 +2,22 @@
     margin:0;
     padding: 0;
 }
-/* :root {
-  --primary-dark: #011222;   
-  --secondary-dark: #00204a;   
-  --accent-color: #00bbc2;    
-  --light-text: #e6f1ff;      
-  --muted-text: #a8b2d1;      
-} */
+.bg{
+  background-color: #383c65;
+}
+.bg-{
+  background-color: #eeeeee1c;
+}
 html {
     scroll-behavior: smooth;
   }
-
+  /* contact */
 body{
     margin:0;
     padding: 0;
     background-color: var(--primary-dark);
 }
 
-
-/* ---------------------------------------------------------------------- */
-/* .icon{
-  width: 60px;
-  display:grid;
-  place-content: center;
-
-}
-.icon img{
-  width:30px;
-  height:30px
-}
-.icon li{
-  width: 100%;
-  list-style-type: none;
-  place-content: center;
-  background-color: red;
-  
-}
-
-header h1{
-  font-size: 24px;
-  font-weight: bolder;
-  color:white;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  padding-left: 15px;
-}
-
-
-.icon-button {
-  background-color: #3498db00;
-  border: none;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-right: 5px;
-}
-
-.icon-button i {
-  font-size: 24px;
-  margin-bottom: 5px;
-  display: block;
-}
-.icon-button:hover{
-  background-color: #212a7a00;
-  color:rgb(240, 83, 83);
-} */
 .header-nav {
   background-color: #1a1a1a;
   padding: 1rem;
@@ -838,7 +785,7 @@ h1 span{
   width:100%;
   height:auto;
 
-  background-color: #004d70;
+  background-color: #3d405c;
 
 }
 .const-header{

@@ -5,15 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="background.scss">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/umd/lucide.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+    
     <title>Nduduzo Ndlovu</title>
 
     <style>
@@ -371,24 +368,24 @@
 </section>
 
 
-  <section id="services" class="py-20 colors">
+  <!-- <section id="services" class="py-20 colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl font-bold text-center mb-12 text-white">Services I Offer</h2>
 
 
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
-            <div class="bg-gray-700 p-6 rounded-lg shadow-lg" style="background-color: rgba(56,60,101,1) ;">
+            <div class="bg-gray-700 p-6 rounded-lg shadow-lg" style="background-color: rgba(56,60,101,1) ;" onclick="showDetails('mobile-dev')">
                 <i class="fas fa-laptop-code text-4xl text-indigo-500 mb-4"></i>
                 <h3 class="text-xl font-semibold mb-2">Web & App Development</h3>
                 <p>Creating websites and apps that look great and work flawlessly.</p>
             </div>
-            <div class="bg-gray-700 p-6 rounded-lg shadow-lg" style="background-color: rgba(56,60,101,1) ;">
+            <div class="bg-gray-700 p-6 rounded-lg shadow-lg" style="background-color: rgba(56,60,101,1) ;"  onclick="showDetails('mobile-dev')">
                 <i class="fas fa-user-secret text-4xl text-indigo-500 mb-4"></i>
                 <h3 class="text-xl font-semibold mb-2">Application-level Encryption</h3>
                 <p>Skilled in deploying application-level encryption methods.</p>
             </div>
-            <div class="bg-gray-700 p-6 rounded-lg shadow-lg" style="background-color: rgba(56,60,101,1) ;">
+            <div class="bg-gray-700 p-6 rounded-lg shadow-lg" style="background-color: rgba(56,60,101,1) ;" onclick="showDetails('mobile-dev')">
                 <i class="fas fa-code text-4xl text-indigo-500 mb-4"></i>
                 <h3 class="text-xl font-semibold mb-2">UI/UX Design</h3>
                 <p>Designing interfaces that captivate and function seamlessly.</p>
@@ -400,111 +397,81 @@
 
             <div class="bg-gray-700 p-6 rounded-lg shadow-lg" style="background-color: rgba(56,60,101,1) ;">
                 <i class="fas fa-laptop-code text-4xl text-indigo-500 mb-4"></i>
-                <h3 class="text-xl font-semibold mb-2">Web & App Development</h3>
-                <p>Creating websites and apps that look great and work flawlessly.</p>
+                <h3 class="text-xl font-semibold mb-2">Software Development</h3>
+                <p>Custom software solutions tailored to your business needs and requirements.</p>
             </div>
             <div class="bg-gray-700 p-6 rounded-lg shadow-lg" style="background-color: rgba(56,60,101,1) ;">
                 <i class="fas fa-user-secret text-4xl text-indigo-500 mb-4"></i>
-                <h3 class="text-xl font-semibold mb-2">Application-level Encryption</h3>
-                <p>Skilled in deploying application-level encryption methods.</p>
+                <h3 class="text-xl font-semibold mb-2">Backend & Cloud Services</h3>
+                <p>Scalable backend solutions and cloud infrastructure management.</p>
             </div>
             <div class="bg-gray-700 p-6 rounded-lg shadow-lg" style="background-color: rgba(56,60,101,1) ;">
                 <i class="fas fa-code text-4xl text-indigo-500 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">UI/UX Design</h3>
+                <p>Designing interfaces that captivate and function seamlessly.</p>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+
+
+<section id="services" class="py-20 bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-12 text-white">Services I Offer</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-white">
+            <!-- Web & App Development -->
+            <div class="bg p-6 rounded-xl shadow-lg cursor-pointer transform hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20" onclick="showDetails('web-dev')">
+                <i class="fas fa-laptop-code text-4xl text-indigo-500 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Web & App Development</h3>
+                <p>Creating websites and apps that look great and work flawlessly.</p>
+            </div>
+
+            <!-- Mobile App Development -->
+            <div class="bg p-6 rounded-xl shadow-lg cursor-pointer transform hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20" onclick="showDetails('mobile-dev')">
+                <i class="fas fa-mobile-alt text-4xl text-purple-500 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Mobile App Development</h3>
+                <p>Native and cross-platform mobile applications for iOS and Android.</p>
+            </div>
+
+            <!-- Application-level Encryption -->
+            <div class="bg p-6 rounded-xl shadow-lg cursor-pointer transform hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-red-500/20" onclick="showDetails('encryption')">
+                <i class="fas fa-user-secret text-4xl text-red-500 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Application-Level Encryption</h3>
+                <p>Ensuring data security with strong encryption techniques.</p>
+            </div>
+
+            <!-- UI/UX Design -->
+            <div class="bg p-6 rounded-xl shadow-lg cursor-pointer transform hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-teal-500/20" onclick="showDetails('uiux')">
+                <i class="fas fa-paint-brush text-4xl text-teal-500 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">UI/UX Design</h3>
+                <p>Designing visually appealing and user-friendly interfaces.</p>
+            </div>
+
+            <!-- Software Development -->
+            <div class="bg p-6 rounded-xl shadow-lg cursor-pointer transform hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/20" onclick="showDetails('software-dev')">
+                <i class="fas fa-code text-4xl text-green-500 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Software Development</h3>
+                <p>Custom software solutions tailored to your business needs.</p>
+            </div>
+
+            <!-- Backend & Cloud Services -->
+            <div class="bg p-6 rounded-xl shadow-lg cursor-pointer transform hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/20" onclick="showDetails('cloud-dev')">
+                <i class="fas fa-cloud text-4xl text-orange-500 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Backend & Cloud Services</h3>
+                <p>Scalable backend solutions and cloud infrastructure management.</p>
+            </div>
+
+            <!-- Consulting & Training -->
+            <div class="bg p-6 rounded-xl shadow-lg cursor-pointer transform hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-pink-500/20" onclick="showDetails('consulting')">
+                <i class="fas fa-chalkboard-teacher text-4xl text-pink-500 mb-4"></i>
                 <h3 class="text-xl font-semibold mb-2">Consulting & Training</h3>
-                <p>Technical consulting and team training in modern development practices..</p>
+                <p>Expert advice and training on software development practices.</p>
             </div>
         </div>
     </div>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section class="py-16 px-4  mx-auto bg-gray-700 ">
-    <h2 class="text-4xl font-bold text-white text-center mb-12">Services I Offer</h2>
-    
-    <!-- Services Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Web Development Card -->
-        <div class="bg-gray-800 rounded-xl p-6 transform hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 cursor-pointer group" onclick="showDetails('web-dev')">
-            <div class="h-12 w-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-500/30 transition-colors">
-                <i data-lucide="globe" class="text-blue-400"></i>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-3">Web Development</h3>
-            <p class="text-gray-400 mb-6">Custom websites and web applications built with modern technologies and best practices.</p>
-           
-            <button class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
-                View Details
-                <i data-lucide="chevron-right" class="h-4 w-4 ml-2"></i>
-            </button>
-        </div>
-
-        <!-- Mobile Development Card -->
-        <div class="bg-gray-800 rounded-xl p-6 transform hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20 cursor-pointer group" onclick="showDetails('mobile-dev')">
-            <div class="h-12 w-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-purple-500/30 transition-colors">
-                <i data-lucide="smartphone" class="text-purple-400"></i>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-3">Mobile App Development</h3>
-            <p class="text-gray-400 mb-6">Native and cross-platform mobile applications for iOS and Android platforms.</p>
-            <button class="flex items-center text-purple-400 hover:text-purple-300 transition-colors">
-                View Details
-                <i data-lucide="chevron-right" class="h-4 w-4 ml-2"></i>
-            </button>
-        </div>
-
-        <!-- Software Development Card -->
-        <div class="bg-gray-800 rounded-xl p-6 transform hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/20 cursor-pointer group" onclick="showDetails('software-dev')">
-            <div class="h-12 w-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-green-500/30 transition-colors">
-                <i data-lucide="code" class="text-green-400"></i>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-3">Software Development</h3>
-            <p class="text-gray-400 mb-6">Custom software solutions tailored to your business needs and requirements.</p>
-            <button class="flex items-center text-green-400 hover:text-green-300 transition-colors">
-                View Details
-                <i data-lucide="chevron-right" class="h-4 w-4 ml-2"></i>
-            </button>
-        </div>
-
-        <!-- Backend & Cloud Card -->
-        <div class="bg-gray-800 rounded-xl p-6 transform hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/20 cursor-pointer group" onclick="showDetails('cloud-dev')">
-            <div class="h-12 w-12 bg-orange-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-orange-500/30 transition-colors">
-                <i data-lucide="cloud" class="text-orange-400"></i>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-3">Backend & Cloud Services</h3>
-            <p class="text-gray-400 mb-6">Scalable backend solutions and cloud infrastructure management.</p>
-            <button class="flex items-center text-orange-400 hover:text-orange-300 transition-colors">
-                View Details
-                <i data-lucide="chevron-right" class="h-4 w-4 ml-2"></i>
-            </button>
-        </div>
-
-        <!-- Consulting Card -->
-        <div class="bg-gray-800 rounded-xl p-6 transform hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-pink-500/20 cursor-pointer group" onclick="showDetails('consulting')">
-            <div class="h-12 w-12 bg-pink-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-pink-500/30 transition-colors">
-                <i data-lucide="graduation-cap" class="text-pink-400"></i>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-3">Consulting & Training</h3>
-            <p class="text-gray-400 mb-6">Technical consulting and team training in modern development practices.</p>
-            <button class="flex items-center text-pink-400 hover:text-pink-300 transition-colors">
-                View Details
-                <i data-lucide="chevron-right" class="h-4 w-4 ml-2"></i>
-            </button>
-        </div>
-    </div>
-</section>
-
 <!-- Service Details Modal -->
 <div id="serviceModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4">
     <div class="bg-gray-800 rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
@@ -546,7 +513,7 @@
 
 
 
-  <section  id="projects" style=" background-color: rgba(56,60,101,1) ;">
+  <section  id="projects" style=" background-color: rgb(56, 60, 101) ;">
     <br>
     <h1 class="text-3xl font-bold text-center text-white">My Projects</h1>
   </section>
@@ -672,7 +639,25 @@
                 <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-white">My Projects</h2>
                 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-                    <!-- Project Card 1 -->
+             
+                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+                        <div class="aspect-w-16 aspect-h-9 mb-4">
+                            <img src="images/projects/chats.png" alt="Project" class="rounded-lg w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-semibold mb-2 text-white">Real-Time Chat App</h3>
+                        <p class="mb-4 text-gray-300 text-sm sm:text-base">A robust real-time communication platform enabling direct peer-to-peer messaging.</p>
+                        <a href="#" class="inline-block text-indigo-500 hover:text-indigo-400 hover:underline transition duration-300">View Details</a>
+                    </div>
+  
+                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+                        <div class="aspect-w-16 aspect-h-9 mb-4">
+                            <img src="images/projects/chats.png" alt="Project" class="rounded-lg w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-semibold mb-2 text-white">Real-Time Chat App</h3>
+                        <p class="mb-4 text-gray-300 text-sm sm:text-base">A robust real-time communication platform enabling direct peer-to-peer messaging.</p>
+                        <a href="#" class="inline-block text-indigo-500 hover:text-indigo-400 hover:underline transition duration-300">View Details</a>
+                    </div>
+    
                     <div class="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
                         <div class="aspect-w-16 aspect-h-9 mb-4">
                             <img src="images/projects/chats.png" alt="Project" class="rounded-lg w-full h-full object-cover">
@@ -682,27 +667,7 @@
                         <a href="#" class="inline-block text-indigo-500 hover:text-indigo-400 hover:underline transition duration-300">View Details</a>
                     </div>
         
-                    <!-- Project Card 2 -->
-                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
-                        <div class="aspect-w-16 aspect-h-9 mb-4">
-                            <img src="images/projects/chats.png" alt="Project" class="rounded-lg w-full h-full object-cover">
-                        </div>
-                        <h3 class="text-lg sm:text-xl font-semibold mb-2 text-white">Real-Time Chat App</h3>
-                        <p class="mb-4 text-gray-300 text-sm sm:text-base">A robust real-time communication platform enabling direct peer-to-peer messaging.</p>
-                        <a href="#" class="inline-block text-indigo-500 hover:text-indigo-400 hover:underline transition duration-300">View Details</a>
-                    </div>
-        
-                    <!-- Project Card 3 -->
-                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
-                        <div class="aspect-w-16 aspect-h-9 mb-4">
-                            <img src="images/projects/chats.png" alt="Project" class="rounded-lg w-full h-full object-cover">
-                        </div>
-                        <h3 class="text-lg sm:text-xl font-semibold mb-2 text-white">Real-Time Chat App</h3>
-                        <p class="mb-4 text-gray-300 text-sm sm:text-base">A robust real-time communication platform enabling direct peer-to-peer messaging.</p>
-                        <a href="#" class="inline-block text-indigo-500 hover:text-indigo-400 hover:underline transition duration-300">View Details</a>
-                    </div>
-        
-                    <!-- Project Card 4 -->
+                 
                     <div class="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
                         <div class="aspect-w-16 aspect-h-9 mb-4">
                             <img src="images/projects/chats.png" alt="Project" class="rounded-lg w-full h-full object-cover">
@@ -716,37 +681,131 @@
         </section>
     
         <!-- Pricing Section -->
-        <section id="pricing" class="py-20 bg-gray-800">
+        <!-- <section id="pricing" class="py-20 bg-gray-800">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-bold text-center mb-12">Pricing</h2>
+                <h2 class="text-3xl font-bold text-center text-white mb-12">Pricing</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
-                        <h3 class="text-xl font-semibold mb-4">Basic</h3>
-                        <p class="text-4xl font-bold mb-4">$99</p>
-                        <ul class="mb-4">
+                   
+                    <div class="bg-gray-700 p-6 rounded-lg shadow-lg text-center">
+                        <h3 class="text-xl font-semibold text-white mb-4">Basic</h3>
+                        <p class="text-4xl font-bold text-yellow-400 mb-4">R1,800</p>
+                        <ul class="mb-4 text-gray-300">
                             <li>1 Project</li>
-                            <li>Basic Support</li>
+                            <li>Basic Support (Email only)</li>
+                            <li>Delivery in 7 Days</li>
                         </ul>
                         <a href="#" class="bg-indigo-500 text-white px-6 py-3 rounded-lg hover:bg-indigo-600">Get Started</a>
                     </div>
-                    <!-- Add more pricing plans here -->
-                </div>
-            </div>
-        </section>
-    
-        <!-- Testimonials Section -->
-        <section id="testimonials" class="py-20 bg-gray-900">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-bold text-center mb-12">Testimonials</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="testimonial-card p-6 rounded-lg">
-                        <p class="mb-4">"Nduduzo is an amazing developer! He delivered my project on time and exceeded my expectations."</p>
-                        <p class="font-semibold">- Client Name</p>
+        
+                  
+                    <div class="bg-gray-700 p-6 rounded-lg shadow-lg text-center">
+                        <h3 class="text-xl font-semibold text-white mb-4">Professional</h3>
+                        <p class="text-4xl font-bold text-yellow-400 mb-4">R4,500</p>
+                        <ul class="mb-4 text-gray-300">
+                            <li>Up to 3 Projects</li>
+                            <li>Priority Support (Email & Chat)</li>
+                            <li>Delivery in 5 Days</li>
+                            <li>Custom Features Available</li>
+                        </ul>
+                        <a href="#" class="bg-indigo-500 text-white px-6 py-3 rounded-lg hover:bg-indigo-600">Get Started</a>
                     </div>
-                    <!-- Add more testimonials here -->
+        
+       
+                    <div class="bg-gray-700 p-6 rounded-lg shadow-lg text-center">
+                        <h3 class="text-xl font-semibold text-white mb-4">Enterprise</h3>
+                        <p class="text-4xl font-bold text-yellow-400 mb-4">R9,500</p>
+                        <ul class="mb-4 text-gray-300">
+                            <li>Unlimited Projects</li>
+                            <li>24/7 Dedicated Support</li>
+                            <li>Delivery in 3 Days</li>
+                            <li>Advanced Customization & API Integrations</li>
+                            <li>Ongoing Maintenance & Updates</li>
+                        </ul>
+                        <a href="#" class="bg-indigo-500 text-white px-6 py-3 rounded-lg hover:bg-indigo-600">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        
+        <section id="pricing" class="py-20 bg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center text-white mb-12">Pricing</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Basic Plan -->
+                    <div class="bg- p-6 rounded-lg shadow-lg text-center">
+                        <h3 class="text-xl font-semibold text-white mb-4">Basic</h3>
+                        <p class="text-4xl font-bold text-yellow-400 mb-4">R4,500 - R8,000</p>
+                        <ul class="mb-4 text-gray-300">
+                            <li>1 Project</li>
+                            <li>Basic Support (Email only)</li>
+                            <li>Delivery in 7 Days</li>
+                        </ul>
+                        <a href="/contact" class="bg-indigo-500 text-white px-6 py-3 rounded-lg hover:bg-indigo-600">Get a Quote</a>
+                    </div>
+        
+                    <!-- Middle-Level Plan -->
+                    <div class="bg- p-6 rounded-lg shadow-lg text-center">
+                        <h3 class="text-xl font-semibold text-white mb-4">Professional</h3>
+                        <p class="text-4xl font-bold text-yellow-400 mb-4">R10,000 - R20,000</p>
+                        <ul class="mb-4 text-gray-300">
+                            <li>Up to 3 Projects</li>
+                            <li>Priority Support (Email & Chat)</li>
+                            <li>Delivery in 5 Days</li>
+                            <li>Custom Features Available</li>
+                        </ul>
+                        <a href="/get-quote" class="bg-indigo-500 text-white px-6 py-3 rounded-lg hover:bg-indigo-600">Request Pricing</a>
+                    </div>
+        
+                    <!-- High-Level Plan -->
+                    <div class="p-6 rounded-lg shadow-lg text-center bg-">
+                        <h3 class="text-xl font-semibold text-white mb-4">Enterprise</h3>
+                        <p class="text-4xl font-bold text-yellow-400 mb-4">R15,000 - R100,000</p>
+                        <ul class="mb-4 text-gray-300">
+                            <li>Unlimited Projects</li>
+                            <li>24/7 Dedicated Support</li>
+                            <li>Delivery in 3 Days</li>
+                            <li>Advanced Customization & API Integrations</li>
+                            <li>Ongoing Maintenance & Updates</li>
+                        </ul>
+                        <a href="/pricing-details" class="bg-indigo-500 text-white px-6 py-3 rounded-lg hover:bg-indigo-600">View Details</a>
+                    </div>
                 </div>
             </div>
         </section>
+        
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 bg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center text-white mb-12">Testimonials</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="testimonial-card p-6 bg-gray-800 rounded-lg shadow-lg">
+                        <p class="mb-4 text-white">"Nduduzo is an amazing developer! He delivered my project on time and exceeded my expectations."</p>
+                        <p class="font-semibold text-yellow-400">- Ayanda Buthelezi</p>
+                    </div>
+                    <div class="testimonial-card p-6 bg-gray-800 rounded-lg shadow-lg">
+                        <p class="mb-4 text-white">"Working with Nduduzo was a fantastic experience. His problem-solving skills are top-notch!"</p>
+                        <p class="font-semibold text-yellow-400">- Amahle Dlamini</p>
+                    </div>
+                    <div class="testimonial-card p-6 bg-gray-800 rounded-lg shadow-lg">
+                        <p class="mb-4 text-white">"I highly recommend Nduduzo! He transformed our ideas into a fully functional and user-friendly application."</p>
+                        <p class="font-semibold text-yellow-400">- Patience Marasha</p>
+                    </div>
+                    <div class="testimonial-card p-6 bg-gray-800 rounded-lg shadow-lg">
+                        <p class="mb-4 text-white">"His attention to detail and dedication to delivering high-quality code is remarkable."</p>
+                        <p class="font-semibold text-yellow-400">- Wandile Khumalo</p>
+                    </div>
+                    <div class="testimonial-card p-6 bg-gray-800 rounded-lg shadow-lg">
+                        <p class="mb-4 text-white">"The best developer I've worked with! Always professional and extremely knowledgeable."</p>
+                        <p class="font-semibold text-yellow-400">- Ayabonga Nomvalo</p>
+                    </div>
+                    <div class="testimonial-card p-6 bg-gray-800 rounded-lg shadow-lg">
+                        <p class="mb-4 text-white">"Thanks to Nduduzo, our business now has a sleek and efficient website that meets all our needs."</p>
+                        <p class="font-semibold text-yellow-400">- Nokubonga Mabaso</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
 
 
     <section id="contact">
@@ -889,7 +948,11 @@
             });
         });
 
-lucide.createIcons();
+
+
+</script>
+<script>
+    lucide.createIcons();
     const serviceDetails = {
      
         'web-dev': {
@@ -1077,7 +1140,6 @@ lucide.createIcons();
             hideDetails();
         }
     });
-
 </script>
 
 </body>
